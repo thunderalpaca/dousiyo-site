@@ -12,7 +12,7 @@ description: ""
 管理: [迷鉄](/company/meitetsu/index.md)  
 ひらがな: ひがしこうか  
 ローマ字: higasikoka  
-ナンバリング: N01, W01
+ナンバリング: `N01`, `W01`
 
 ## 乗り入れ路線
 - [<span style="color: #78B0F9">南北本線 (N)</span>](/company/meitetsu/line/nanbokuhonsen.md)

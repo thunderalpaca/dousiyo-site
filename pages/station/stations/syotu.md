@@ -12,7 +12,7 @@ description: "小津駅は、放物連絡線と空港誘導線、丈北送信線
 管理: [放物](/company/houbutu/index.md)  
 ひらがな: しょうつ  
 ローマ字(放物): Syotu  
-ナンバリング: E03, H03, I02
+ナンバリング: `E03`, `H03`, `I02`
 
 ## 乗り入れ路線
 - [<span style="color: #9577A3">放物連絡線 (E)</span>](/company/houbutu/line/houbuturenrakusen.md)
