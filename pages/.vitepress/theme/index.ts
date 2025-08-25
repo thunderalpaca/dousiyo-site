@@ -6,6 +6,7 @@ import './custom.css'
 import './style.css'
 import './font.css'
 import BigImage from './components/BigImage.vue'
+import LinesMap from './components/LinesMap.vue'
 
 export default {
   extends: DefaultTheme,
@@ -16,5 +17,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.component('BigImage', BigImage)
+    app.component('LinesMap', LinesMap)
   }
 } satisfies Theme

@@ -2,9 +2,14 @@ import { defineConfig } from 'vitepress'
 import { pagefindPlugin } from 'vitepress-plugin-pagefind'
 
 // https://vitepress.dev/reference/site-config
+const rawBase = process.env.VITEPRESS_BASE
+const normalizedBase = rawBase && rawBase.trim() !== ''
+  ? `/${rawBase.replace(/^\/+/g, '').replace(/\/+$/g, '')}/`
+  : '/'
+
 export default defineConfig({
   lang: 'ja-JP',
-  base: '/' + process.env.VITEPRESS_BASE + '/' || '/',
+  base: normalizedBase,
   title: '名前どうしよ鯖のサイト',
   ignoreDeadLinks: true,
   description: '名前どうしよ鯖の長い歴史と各鉄道会社について紹介',
