@@ -5,6 +5,7 @@ import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 import './style.css'
 import './font.css'
+import BigImage from './components/BigImage.vue'
 
 export default {
   extends: DefaultTheme,
@@ -14,5 +15,6 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    app.component('BigImage', BigImage)
   }
 } satisfies Theme
