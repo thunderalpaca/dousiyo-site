@@ -7,7 +7,7 @@ hero:
 ---
 ![KGHD](/img/company/kinketsuHG/KGHD.png)
 
-# 子会社一覧
+# グループ会社一覧
 - [豊急](/company/kinketsuHG/toyokyu)
 - [金欠鉄道](/company/kinketsuHG/kinketsu)
 - [送風鉄道](/company/kinketsuHG/sofu)

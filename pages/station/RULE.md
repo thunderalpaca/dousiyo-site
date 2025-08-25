@@ -9,6 +9,7 @@
 ```
 
 各ファイルのフォーマットを以下に示す。(調整中)
+ファイル名はローマ字とする。
 
 <駅名1>.md
 ```md
@@ -32,7 +33,7 @@ description: "高賀駅は、3路線が乗り入れる6面10線の大規模な�
 管理: [放物](/company/houbutu/index.md)  
 ひらがな: こうか  
 ローマ字: Koka  
-ナンバリング: B01, C01, E01
+ナンバリング: `B01`, `C01`, `E01`
 
 ## 乗り入れ路線
 - [<span style="color: #D7817E">理事冠状線 (B)</span>](/company/houbutu/line/rizikanzyousen.md)

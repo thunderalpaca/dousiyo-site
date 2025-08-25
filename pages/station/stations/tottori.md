@@ -15,7 +15,7 @@ description: ""
 管理: [金欠HG](/company/kinketsuHG/), [放物](/company/houbutu/), [迷鉄](/company/meitetsu/)  
 ひらがな: こうか  
 ローマ字: Koka  
-ナンバリング: B01, C01, E01
+ナンバリング: `B01`, `C01`, `E01`
 
 ## 乗り入れ路線
 - [<span style="color: #D7817E">理事冠状線 (B)</span>](/company/houbutu/line/rizikanzyousen.md)

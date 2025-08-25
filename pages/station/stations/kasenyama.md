@@ -18,7 +18,7 @@ description: ""
 管理: [金欠HG](/company/kinketsuHG/)  
 ひらがな: かせんやま  
 ローマ字: Kasenyama  
-ナンバリング: ST03, SO03
+ナンバリング: `ST03`, `SO03`
 
 ## 乗り入れ路線
 - [<span style="color: #505AA9">送風鉄道本線 (ST)</span>](/company/kinketsuHG/sofu/line/soufuhonsen.md)

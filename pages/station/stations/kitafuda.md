@@ -12,7 +12,7 @@ description: ""
 管理: [放物](/company/houbutu/index.md)  
 ひらがな: きたふだ  
 ローマ字: Kitafuda  
-ナンバリング: B02
+ナンバリング: `B02`
 
 
 ## 乗り入れ路線
