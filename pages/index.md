@@ -1,0 +1,30 @@
+---
+layout: home
+
+hero:
+  name: "名前どうしよ鯖"
+  text: "鉄道、経済、銃、なんでもありのサーバー"
+  tagline: 長い歴史と各鉄道会社について紹介
+  image:
+    src: /zou-original.webp
+    alt: 三様にある偉人の像
+  actions:
+    - theme: brand
+      text: もっと詳しく!
+      link: /tour/guide
+    - theme: alt
+      text: 花川山に移住しませんか？
+      link: /station/stations/kasenyama
+    - theme: alt
+      text: 機能の説明はこちら
+      link: /func
+
+features:
+  - title: 鉄道ファースト
+    details: 10を越える路線があり、それぞれに個性があります。
+  - title: 発展した経済
+    details: 券売機はもちろんコンビニやネットショップもあり、為替も実装予定。
+  - title: 銃と車
+    details: 鉄道だけでなく、道路網も発展しています。銃もあり、スピード感ある銃撃戦が楽しめます。
+---
+
