@@ -31,6 +31,7 @@ features:
 <br>
 
 # お知らせ
+## 2025年8月25日
 - [金欠鉄道取鳥線](/company/kinketsuHG/kinketsu/line/tottorisen.md)  
 金欠鉄道取鳥線は1週間~1ヶ月間ほど**試運転取り止め**します  
 金木,鶴牛湾へは豊急取鳥LRTをご利用下さい
