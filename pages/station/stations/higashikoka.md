@@ -1,6 +1,21 @@
 ---
 layout: doc
 title: "東高賀"
+line:
+  meiN:
+    prev: "tottori"
+    next: "meitetsubanjo"
+    number: "01"
+  meiW:
+    prev: null
+    next: "saibanshomae"
+    number: "01"
+  meiS:
+    prev: null
+    next: "tottori"
+    number: "02"
+x: 400
+y: 450
 description: ""
 ---
 

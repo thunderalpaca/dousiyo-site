@@ -11,5 +11,5 @@ description: ""
 {{ $frontmatter.description }}
 
 ## 所持路線
-- [<span style="color: #755747">軌道線</span>](/company/satsutaba/line/shamisen.md)
-- [<span style="color: #6E812F">西信線</span>](/company/satsutaba/line/tonbi.md)
+- [<span style="color: #755747">軌道線</span>](/company/furui/line/kidousen.md)
+- [<span style="color: #6E812F">西信線</span>](/company/furui/line/saishinsen.md)

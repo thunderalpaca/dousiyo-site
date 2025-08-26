@@ -16,9 +16,5 @@ description: "豊急への乗り入れを行う路線。小津から空港誘導
 ラインカラー: <span :style="{backgroundColor: $frontmatter.color, display: 'inline-block', width: '0.75em', height: '0.75em', border: `1px solid #1b1b1f`, marginRight: '0.25em'}" />`{{ $frontmatter.color }}`
 
 ## 駅
-- [高賀](/station/stations/koka.md)
-- [小津](/station/stations/syotu.md)
-- [取鳥](/station/stations/tottori.md)
-
 <small>自動表示の試験運用中</small>
 <Stations />

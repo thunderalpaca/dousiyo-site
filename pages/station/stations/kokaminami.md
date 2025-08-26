@@ -1,6 +1,13 @@
 ---
 layout: doc
 title: "高賀南"
+line:
+  toyT:
+    prev: null
+    next: shin-shotsu
+    number: "10"
+x: 450
+y: 550
 description: ""
 ---
 
@@ -12,7 +19,7 @@ description: ""
 管理: [豊急](/company/kinketsuHG/toyokyu/index.md)  
 ひらがな: こうかみなみ  
 ローマ字: kokaminami  
-ナンバリング: `T10`
+ナンバリング: <Numberling />
 
 ## 乗り入れ路線
-- [<span style="color: #2B66B1">豊急本線 (T)</span>](/company/kinketsuHG/toyokyu/line/toyokyuhonsen.md)
+<LineInfo />

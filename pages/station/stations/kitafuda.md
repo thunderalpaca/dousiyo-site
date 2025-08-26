@@ -1,6 +1,13 @@
 ---
 layout: doc
 title: "北札"
+line: 
+  houB:
+    prev: "satutaba"
+    next: "banzyo"
+    number: "03"
+x: 500
+y: 400
 description: ""
 ---
 
@@ -12,8 +19,7 @@ description: ""
 管理: [放物](/company/houbutu/index.md)  
 ひらがな: きたふだ  
 ローマ字: Kitafuda  
-ナンバリング: `B02`
-
+ナンバリング: <Numberling />
 
 ## 乗り入れ路線
-- [<span style="color: #D7817E">理事冠状線 (B)</span>](/company/houbutu/line/rizikanzyousen.md)
+<LineInfo />

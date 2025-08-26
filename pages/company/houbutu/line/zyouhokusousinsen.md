@@ -16,9 +16,5 @@ description: "車庫と万丈と新シベリアを結ぶ路線。"
 ラインカラー: <span :style="{backgroundColor: $frontmatter.color, display: 'inline-block', width: '0.75em', height: '0.75em', border: `1px solid #1b1b1f`, marginRight: '0.25em'}" />`{{ $frontmatter.color }}`
 
 ## 駅
-- [車庫](/station/stations/syako.md)
-- [万丈](/station/stations/banzyo.md)
-- [しょうつ](/station/stations/syotu.md)
-
 <small>自動表示の試験運用中</small>
 <Stations />

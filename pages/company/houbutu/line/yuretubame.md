@@ -16,8 +16,5 @@ description: "台庭と高賀を結ぶ路線。放物唯一のモノレール路
 ラインカラー: <span :style="{backgroundColor: $frontmatter.color, display: 'inline-block', width: '0.75em', height: '0.75em', border: `1px solid #1b1b1f`, marginRight: '0.25em'}" />`{{ $frontmatter.color }}`
 
 ## 駅
-- [新高賀](/station/stations/sinkoka.md)
-- [台庭](/station/stations/daitei.md)
-
 <small>自動表示の試験運用中</small>
 <Stations />
