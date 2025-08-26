@@ -10,7 +10,8 @@ line:
     prev: "banzyo"
     next: null
     number: "04"
- 
+x: 400
+y: 300
 description: "楓ヶ丘駅は、南北本線と理事冠状線の接続駅で、近くには楓ヶ丘サーキットがあります。"
 ---
 

@@ -16,8 +16,5 @@ description: "初期スポーンと高賀を繋げるサーバーとしても重
 ラインカラー: <span :style="{backgroundColor: $frontmatter.color, display: 'inline-block', width: '0.75em', height: '0.75em', border: `1px solid #1b1b1f`, marginRight: '0.25em'}" />`{{ $frontmatter.color }}`
 
 ## 駅
-- [高賀](/station/stations/koka.md)
-- [三様](/station/stations/sanyo.md)
-
 <small>自動表示の試験運用中</small>
 <Stations />

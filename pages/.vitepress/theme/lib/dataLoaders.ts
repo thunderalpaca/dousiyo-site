@@ -23,6 +23,8 @@ export interface Station {
   id: string
   lines: StationID[]
   link: string
+  x?: number
+  y?: number
 }
 
 export function mapToLines(raw: any[]): Line[] {
@@ -68,9 +70,16 @@ export function buildStationsData(lines: Line[], stationRaw: any[]): Station[] {
     const parts = stationUrl.split('/').filter(Boolean)
     const sSlug = (parts[parts.length - 1] || '').replace(/\.html$/, '')
     const link: string = stationUrl ? withBase(stationUrl.startsWith('/') ? stationUrl : `/${stationUrl}`) : ''
+  // x, y from frontmatter (number or numeric string)
+  const xRaw = st?.frontmatter?.x
+  const yRaw = st?.frontmatter?.y
+  const xNum = typeof xRaw === 'number' ? xRaw : parseFloat(String(xRaw ?? ''))
+  const yNum = typeof yRaw === 'number' ? yRaw : parseFloat(String(yRaw ?? ''))
+  const x: number | undefined = Number.isFinite(xNum) ? xNum : undefined
+  const y: number | undefined = Number.isFinite(yNum) ? yNum : undefined
     const stationLines: StationID[] = []
     const lineFm: Record<string, any> | undefined = st?.frontmatter?.line
-    if (!lineFm || typeof lineFm !== 'object') return { name, id: sSlug, lines: stationLines, link }
+  if (!lineFm || typeof lineFm !== 'object') return { name, id: sSlug, lines: stationLines, link, x, y }
     for (const key of Object.keys(lineFm)) {
       let line: Line | undefined = idMap[key] || slugMap[key]
       if (!line) continue
@@ -82,7 +91,7 @@ export function buildStationsData(lines: Line[], stationRaw: any[]): Station[] {
       const nextRaw: string | undefined = entry?.next
       stationLines.push({ line: line.id, id: numStr, prev: prevRaw as any, next: nextRaw as any })
     }
-    return { name, id: sSlug, lines: stationLines, link }
+  return { name, id: sSlug, lines: stationLines, link, x, y }
   })
 }
 

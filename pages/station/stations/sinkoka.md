@@ -3,9 +3,11 @@ layout: doc
 title: "新高賀"
 line:
   houG:
-    prev: "null"
+    prev: null
     next: "daitei"
     number: "01"
+x: 375
+y: 500
 description: "高賀の北の方にあるゆれつばめの駅。"
 ---
 

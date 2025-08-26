@@ -1,6 +1,25 @@
 ---
 layout: doc
 title: "取鳥"
+line:
+  houE:
+    prev: syotu
+    next: emori
+    number: "04"
+  toyT:
+    prev: shin-shotsu
+    next: emori
+    number: "09"
+  meiS:
+    prev: "higashikoka"
+    next: null
+    number: "02"
+  kinE:
+    prev: null
+    next: "narabaraaoi"
+    number: "01"
+x: 450
+y: 900
 description: ""
 ---
 

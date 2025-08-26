@@ -29,6 +29,8 @@ line:
     prev: null
     next: "syotu"
     number: "01"
+x: 0
+y: 0
 description: "高賀駅は、3路線が乗り入れる6面10線の大規模な放物の駅です。"
 ---
 

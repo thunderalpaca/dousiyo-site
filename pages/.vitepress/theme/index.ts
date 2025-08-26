@@ -10,6 +10,7 @@ import DataCheck from './components/DataCheck.vue'
 import LineInfo from './components/LineInfo.vue'
 import Numberling from './components/Numberling.vue'
 import Stations from './components/Stations.vue'
+import LinesMap from './components/LinesMap.vue'
 
 export default {
   extends: DefaultTheme,
@@ -24,5 +25,6 @@ export default {
     app.component('LineInfo', LineInfo)
     app.component('Numberling', Numberling)
     app.component('Stations', Stations)
+    app.component('LinesMap', LinesMap)
   }
 } satisfies Theme

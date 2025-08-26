@@ -1,6 +1,17 @@
 ---
 layout: doc
 title: "花川山"
+line:
+  sofST:
+    prev: "shurin"
+    next: null
+    number: "03"
+  sofSO:
+    prev: null
+    next: "nawaguchi"
+    number: "03"
+x: 750
+y: 650
 description: ""
 ---
 
@@ -18,7 +29,7 @@ description: ""
 管理: [金欠HG](/company/kinketsuHG/)  
 ひらがな: かせんやま  
 ローマ字: Kasenyama  
-ナンバリング: `ST03`, `SO03`
+ナンバリング: <Numberling />
 
 ## 乗り入れ路線
-- [<span style="color: #505AA9">送風鉄道本線 (ST)</span>](/company/kinketsuHG/sofu/line/soufuhonsen.md)
+<LineInfo />

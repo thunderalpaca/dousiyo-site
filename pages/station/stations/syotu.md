@@ -14,6 +14,8 @@ line:
     prev: "tottori"
     next: "banzyo"
     number: "02"
+x: 500
+y: 600
 description: "小津駅は、放物連絡線と空港誘導線、丈北送信線の接続駅で、豊急との乗り換えも可能です。"
 ---
 
