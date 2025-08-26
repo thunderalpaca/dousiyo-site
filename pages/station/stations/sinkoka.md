@@ -1,6 +1,11 @@
 ---
 layout: doc
 title: "新高賀"
+line:
+  houG:
+    prev: "null"
+    next: "daitei"
+    number: "01"
 description: "高賀の北の方にあるゆれつばめの駅。"
 ---
 
@@ -12,7 +17,7 @@ description: "高賀の北の方にあるゆれつばめの駅。"
 管理: [放物](/company/houbutu/index.md)  
 ひらがな: しんこうか  
 ローマ字: SinKoka  
-ナンバリング: `G01`
+ナンバリング: <Numberling />
 
 ## 乗り入れ路線
-- [<span style="color: #0281C4">ゆれつばめ (G)</span>](/company/houbutu/line/yuretubame.md)
+<LineInfo />

@@ -1,6 +1,15 @@
 ---
 layout: doc
 title: "万丈"
+line: 
+  houB:
+    prev: "kitafuda"
+    next: "kaedegaoka"
+    number: "03"
+  houI:
+    prev: "syotu"
+    next: "syako"
+    number: "03"
 description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、放物連絡線へのアクセスも可能です。"
 ---
 
@@ -12,8 +21,7 @@ description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、
 管理: [放物](/company/houbutu/index.md)  
 ひらがな: ばんじょう  
 ローマ字: Banzyo  
-ナンバリング: `B03`, `I03`
+ナンバリング: <Numberling />
 
 ## 乗り入れ路線
-- [<span style="color: #D7817E">理事冠状線 (B)</span>](/company/houbutu/line/rizikanzyousen.md)
-- [<span style="color: #D74B7E">丈北送信線 (I)</span>](/company/houbutu/line/zyouhokusousinsen.md)
+<LineInfo />

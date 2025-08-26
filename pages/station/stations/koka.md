@@ -1,6 +1,19 @@
 ---
 layout: doc
 title: "高賀"
+line:
+  houB:
+    prev: null
+    next: "satutaba"
+    number: "01"
+  houC:
+    prev: null
+    next: "sanyo"
+    number: "01"
+  houE:
+    prev: null
+    next: "syotu"
+    number: "01"
 description: "高賀駅は、3路線が乗り入れる6面10線の大規模な放物の駅です。"
 ---
 
@@ -17,12 +30,10 @@ description: "高賀駅は、3路線が乗り入れる6面10線の大規模な�
 管理: [放物](/company/houbutu/index.md)  
 ひらがな: こうか  
 ローマ字: Koka  
-ナンバリング: `B01`, `C01`, `E01`
+ナンバリング: <Numberling />
 
 ## 乗り入れ路線
-- [<span style="color: #D7817E">理事冠状線 (B)</span>](/company/houbutu/line/rizikanzyousen.md)
-- [<span style="color: #456E2C">書見勧誘線 (C)</span>](/company/houbutu/line/syokenkanyusen.md)
-- [<span style="color: #9577A3">放物連絡線 (E)</span>](/company/houbutu/line/houbuturenrakusen.md)
+<LineInfo />
 
 ## 名所案内
 - VOID
