@@ -17,8 +17,9 @@
         └── ...
 ```
 
-各ファイルのフォーマットを以下に示す。(調整中)
+各ファイルのフォーマットを以下に示す。(調整中)  
 ファイル名はローマ字とする。
+
 
 <会社名>/index.md
 ```md
@@ -51,10 +52,10 @@ layout: home
 
 hero:
   name: "<グループ名>"
-  tagline: グループの概要
+  tagline: の概要
 ---
 
-# 子会社一覧
+# グループ会社一覧
 - [会社1](/company/group1/company1)
 - [会社2](/company/group1/company2)
 ```
@@ -63,26 +64,23 @@ line/line1.md
 ```md
 ---
 layout: doc
-title: "理事冠状線 (B)"
+title: "理事冠状線"
+letter: B
+color: "#D7817E"
 description: "放物で2番目の路線。放物の中心的な役割を果たしています。"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} ({{ $frontmatter.letter }})
 
 ## 概要
 {{ $frontmatter.description }}  
 管理: [放物](/company/houbutu/index.md)  
 ひらがな: りじかんじょうせん  
 ローマ字: Rizikanzyousen  
-ラインカラー: <span style="color: #D7817E">#D7817E</span>
+ラインカラー: <span :style="{backgroundColor: $frontmatter.color, display: 'inline-block', width: '0.75em', height: '0.75em', border: `1px solid #1b1b1f`, marginRight: '0.25em'}" />`{{ $frontmatter.color }}`
 
 ## 駅
-- [高賀](/station/stations/koka.md)
-- [札束](/station/stations/satutaba.md)
-- [北札](/station/stations/kitafuda.md)
-- [万丈](/station/stations/banzyo.md)
-- [楓ヶ丘](/station/stations/kaedegaoka.md)
-
+<Stations />
 ```
 
 car//kataban.md
