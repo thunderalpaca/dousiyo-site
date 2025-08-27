@@ -1,8 +1,6 @@
 ---
-layout: home
+layout: doc
 description: "車両図鑑"
-hero:
-  name: "車両図鑑"
 ---
 
 <script setup lang="ts">
@@ -15,13 +13,15 @@ function safeUrl(url: string) {
 }
 </script>
 
+# 車両図鑑
+
 <div
   v-for="group in carData"
   :key="group.parent?.url || (group.children[0] && group.children[0].url)"
 >
-  <h1 v-if="group.parent?.frontmatter?.title">
+  <h2 v-if="group.parent?.frontmatter?.title">
     {{ group.parent.frontmatter.title }}
-  </h1>
+  </h2>
 
   <ul>
     <li v-for="car in group.children" :key="car.url">

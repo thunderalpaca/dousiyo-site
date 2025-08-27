@@ -13,7 +13,7 @@ export default defineConfig({
   title: '名前どうしよ鯖のサイト',
   ignoreDeadLinks: true,
   description: '名前どうしよ鯖の長い歴史と各鉄道会社について紹介',
-  head: [['link', { rel: 'icon', href: `${normalizedBase}/favicon.webp` }]],
+  head: [['link', { rel: 'icon', href: `${normalizedBase}favicon.png` }]],
   vite: { plugins: [pagefindPlugin({
     btnPlaceholder: '検索',
     placeholder: 'サイト内を検索',
@@ -22,16 +22,16 @@ export default defineConfig({
   })] },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/favicon.webp',
+    logo: '/favicon.png',
     search: {
       provider: 'local'
     },
     nav: [
       { text: '機能説明', link: '/func' },
-      { text: '歴史', link: '/history' },
       { text: '鉄道', link: '/railway' },
       { text: '路線図', link: '/map' },
-      { text: '観光地', link: '/tour' },
+      { text: '法律', link: '/law' },
+      { text: '観光', link: '/tour' },
     ],
 
     socialLinks: [

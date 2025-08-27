@@ -25,7 +25,7 @@ description: "楓ヶ丘駅は、南北本線と理事冠状線の接続駅で、
 ## 概要
 {{ $frontmatter.description }}  
 管理: [迷鉄](/company/meitetsu/index.md), [放物](/company/houbutu/index.md)  
-ひらがな: 楓ヶ丘  
+ひらがな: かえでがおか  
 ローマ字: Kaedegaoka  
 ナンバリング: <Numberling />
 

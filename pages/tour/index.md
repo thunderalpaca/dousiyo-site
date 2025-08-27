@@ -1,12 +1,15 @@
 ---
 layout: home
-description: "観光地"
+description: "観光"
 hero:
-  name: "観光地"
+  name: "観光"
   actions:
     - theme: brand
       text: 初見さん向けガイドはこちら
       link: /tour/guide
+    - theme: alt
+      text: 歴史
+      link: /history
 ---
 
 # 名所一覧
