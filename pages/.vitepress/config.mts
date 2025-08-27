@@ -28,10 +28,10 @@ export default defineConfig({
     },
     nav: [
       { text: '機能説明', link: '/func' },
-      { text: '歴史', link: '/history' },
       { text: '鉄道', link: '/railway' },
       { text: '路線図', link: '/map' },
-      { text: '観光地', link: '/tour' },
+      { text: '法律', link: '/law' },
+      { text: '観光', link: '/tour' },
     ],
 
     socialLinks: [

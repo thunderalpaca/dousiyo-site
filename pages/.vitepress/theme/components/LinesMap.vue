@@ -338,7 +338,7 @@ onUnmounted(() => {
     align-items: flex-start;
     background-color: #808080;
     overflow: auto;
-    max-height: 60vh;
+    max-height: 80vh;
     padding: 8px;
 }
 
