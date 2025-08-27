@@ -11,6 +11,8 @@ import LineInfo from './components/LineInfo.vue'
 import Numberling from './components/Numberling.vue'
 import Stations from './components/Stations.vue'
 import LinesMap from './components/LinesMap.vue'
+import Sokuho from './components/Sokuho.vue'
+import QuickNews from './components/QuickNews.vue'
 
 export default {
   extends: DefaultTheme,
@@ -26,5 +28,7 @@ export default {
     app.component('Numberling', Numberling)
     app.component('Stations', Stations)
     app.component('LinesMap', LinesMap)
+    app.component('Sokuho', Sokuho)
+    // app.component('QuickNews', QuickNews)
   }
 } satisfies Theme

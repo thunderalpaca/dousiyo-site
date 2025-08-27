@@ -1,0 +1,30 @@
+# news/RULE.md
+
+
+以下に示す例を厳守してください。それ以外であれば何をしても大丈夫です。
+
+```md
+---
+layout: doc
+title: "テストニュース"
+description: "[速報]みーつー空港の設計をひさびさに始める"
+date: 2025-08-27-12:00:00+09:00
+emergency: true
+---
+
+<script setup lang="ts">
+import { formatDate } from '../../.vitepress/theme/utils/date'
+</script>
+
+# {{ $frontmatter.title }}
+{{ formatDate($frontmatter.date) }}
+
+## {{ $frontmatter.description }}  
+```
+`title`: ニュースのタイトルを書いてください。  
+`description`: ニュースの説明を書いてください。  
+`date`: ニュースの日付を書いてください。ISO形式で。  
+`emergency`: 速報かどうかをboolで書いてください。
+
+## 速報ニュースについて
+速報ニュースは追加後2日間、ホームやニュース一覧画面で強調して表示されます。

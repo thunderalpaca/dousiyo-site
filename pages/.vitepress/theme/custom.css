@@ -1,0 +1,6 @@
+.heading,
+.tagline {
+  line-break: strict;
+  word-break: keep-all;
+}
+
