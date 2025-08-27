@@ -13,7 +13,7 @@ export default defineConfig({
   title: '名前どうしよ鯖のサイト',
   ignoreDeadLinks: true,
   description: '名前どうしよ鯖の長い歴史と各鉄道会社について紹介',
-  head: [['link', { rel: 'icon', href: '/favicon.png' }]],
+  head: [['link', { rel: 'icon', href: `${normalizedBase}/favicon.png` }]],
   vite: { plugins: [pagefindPlugin({
     btnPlaceholder: '検索',
     placeholder: 'サイト内を検索',

@@ -20,7 +20,8 @@ description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、
 ---
 
 # {{ $frontmatter.title }}
-<!-- ![駅の写真の説明](駅の写真のURL) -->
+![入口](/img/station/banzyo/front.png)
+![ホーム](/img/station/banzyo/platform.png)
 
 ## 概要
 {{ $frontmatter.description }}  

@@ -8,11 +8,11 @@ line:
     number: "03"
 x: 500
 y: 400
-description: ""
+description: "干鉄の北札束と乗り換え可能"
 ---
 
 # {{ $frontmatter.title }}
-<!-- ![駅の写真の説明](駅の写真のURL) -->
+![ホーム](/img/station/kitafuda/image.png)
 
 ## 概要
 {{ $frontmatter.description }}  
