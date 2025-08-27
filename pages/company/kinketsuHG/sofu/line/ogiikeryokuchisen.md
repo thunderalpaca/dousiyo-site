@@ -17,5 +17,4 @@ description: ""
 
 
 ## 駅
-<small>自動表示の試験運用中</small>
 <Stations />

@@ -30,7 +30,7 @@ description: "放物グループは、鉄道事業を中心に不動産開発、
 ---
 
 # {{ $frontmatter.title }}
-<img src="/img/company/houbutu.png" alt="放物のロゴ" width="100px">
+<img src="/img/company/houbutu.webp" alt="放物のロゴ" width="100px">
 
 ## 概要
 {{ $frontmatter.description }}

@@ -5,7 +5,7 @@ hero:
   name: "金欠HG"
   tagline: 金欠グループは絶対に妥協しない、してはいけない。
 ---
-![KGHD](/img/company/kinketsuHG/KGHD.png)
+![KGHD](/img/company/kinketsuHG/KGHD.webp)
 
 # グループ会社一覧
 - [豊急](/company/kinketsuHG/toyokyu)

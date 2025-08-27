@@ -13,7 +13,7 @@ description: "初見さんにオススメ！イチ押し観光地！"
 x1380, z271  
 スポーンしたらすぐそこ
 
-![三様の写真](/img/tour/sanyo.png)
+![三様の写真](/img/tour/sanyo.webp)
 <small>セロリ</small>
 
 ## [高賀駅](/station/stations/koka.md)
@@ -22,7 +22,7 @@ x1380, z271
 x-32, z432  
 [三様駅](/station/stations/sanyo.md)から電車1本
 
-![高賀駅の写真](/img/tour/koka.png)
+![高賀駅の写真](/img/tour/koka.webp)
 <small>Twister716</small>
 
 ## VOID
@@ -30,7 +30,7 @@ x-32, z432
 ### アクセス
 高賀から青い鉄橋登った先
 
-![VOIDの写真](/img/tour/void.png)
+![VOIDの写真](/img/tour/void.webp)
 <small>セロリ</small>
 
 ## [公営鉄道博物館](/tour/landmark/hakubutukan.md)
@@ -39,7 +39,7 @@ x-32, z432
 x204, z3760  
 [高賀駅](/station/stations/koka.md)から電車1本で[取鳥駅](/station/stations/tottori.md)まで
 
-![公営鉄道博物館の写真](/img/tour/hakubutukan.png)
+![公営鉄道博物館の写真](/img/tour/hakubutukan.webp)
 <small>めだころ</small>
 
 ## 金木
@@ -49,7 +49,7 @@ x204, z3760
 x2642, z4131  
 [高賀南駅](/station/stations/kokaminami.md)から[金木駅](/station/stations/kinki.md)まで電車1本
 
-![金木の町並](/img/tour/kinki.png)
+![金木の町並](/img/tour/kinki.webp)
 <small>セロリ</small>
 
 ## 金木高等裁判所
@@ -57,7 +57,7 @@ x2642, z4131
 ### アクセス
 x2648, z3421
 
-![金木高等裁判所](/img/tour/koutousaibansho.png)
+![金木高等裁判所](/img/tour/koutousaibansho.webp)
 <small>セロリ</small>
 
 ## 花川山
@@ -66,5 +66,5 @@ x2648, z3421
 x2787, z2300  
 [花川山駅](/station/stations/kasenyama.md)のすぐ横
 
-![花川山の写真](/img/tour/kasenyama.png)
+![花川山の写真](/img/tour/kasenyama.webp)
 <small>セロリ</small>

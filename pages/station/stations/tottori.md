@@ -24,7 +24,7 @@ description: ""
 ---
 
 # {{ $frontmatter.title }}
-<!-- ![高賀駅を正面から見ている](/img/tour/koka.png) -->
+<!-- ![高賀駅を正面から見ている](/img/tour/koka.webp) -->
 
 ## 他にも{{ $frontmatter.title }}があります
 - [電鉄取鳥](/station/stations/dentetsutottori.md)
@@ -43,4 +43,4 @@ description: ""
 
 ## 名所案内
 - [公営鉄道博物館](/tour/landmark/hakubutukan.md)
-![公営鉄道博物館](/img/tour/hakubutukan.png)
+![公営鉄道博物館](/img/tour/hakubutukan.webp)

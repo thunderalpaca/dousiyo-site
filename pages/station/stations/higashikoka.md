@@ -20,7 +20,7 @@ description: ""
 ---
 
 # {{ $frontmatter.title }}
-<!-- ![高賀駅を正面から見ている](/img/tour/koka.png) -->
+<!-- ![高賀駅を正面から見ている](/img/tour/koka.webp) -->
 
 ## 概要
 {{ $frontmatter.description }}  

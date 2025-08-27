@@ -8,7 +8,7 @@ description: "サーバー初期の車両から最新の車両までだいたい
 ---
 
 # {{ $frontmatter.title }}
-![博物館](/img/tour/hakubutukan.png)
+![博物館](/img/tour/hakubutukan.webp)
 
 ## 概要
 {{ $frontmatter.description }}  

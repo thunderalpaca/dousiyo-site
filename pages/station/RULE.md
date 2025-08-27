@@ -35,7 +35,7 @@ description: "高賀駅は、3路線が乗り入れる6面10線の大規模な�
 ---
 
 # {{ $frontmatter.title }}
-![高賀駅を正面から見ている](/img/tour/koka.png)
+![高賀駅を正面から見ている](/img/tour/koka.webp)
 
 ## 他にも{{ $frontmatter.title }}駅があります
 - [東高賀](/station/stations/higashikoka.md)
@@ -54,7 +54,7 @@ description: "高賀駅は、3路線が乗り入れる6面10線の大規模な�
 
 ## 名所案内
 - VOID
-![VOID](/img/tour/void.png)
+![VOID](/img/tour/void.webp)
 ```
 
 lineのかきかた
