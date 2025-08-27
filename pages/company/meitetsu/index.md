@@ -5,7 +5,7 @@ description: ""
 ---
 
 # {{ $frontmatter.title }}
-<img src="/img/company/meitetsu.png" alt="迷鉄のロゴ" width="100px">
+<img src="/img/company/meitetsu.webp" alt="迷鉄のロゴ" width="100px">
 
 ## 概要
 {{ $frontmatter.description }}

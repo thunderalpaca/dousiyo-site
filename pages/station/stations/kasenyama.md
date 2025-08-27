@@ -22,7 +22,7 @@ description: ""
 花川山は初見さんが建築をするのに最適な場所です。
 すぐ横に送風の花川山駅があるので、交通アクセスも完璧。
 
-![花川山にある建築物](/img/tour/kasenyama.png)
+![花川山にある建築物](/img/tour/kasenyama.webp)
 
 ## 概要
 {{ $frontmatter.description }}  

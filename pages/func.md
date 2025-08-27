@@ -7,23 +7,23 @@ description: "名前どうしよ鯖にある機能を紹介&説明"
 
 ## 防具非表示
 画像のカーソルの部分にある服のアイコンをクリックします。
-![コスメチックのUI1](/img/func/cosme.png)
+![コスメチックのUI1](/img/func/cosme.webp)
 表示された各スロットの左上にある黒色の部分をクリックすると防具を非表示にできます。
-![コスメチックのUI21](/img/func/cosme2.png)
+![コスメチックのUI21](/img/func/cosme2.webp)
 
 ## 券売機
-![チケット券売機](/img/func/kiosk.png)
+![チケット券売機](/img/func/kiosk.webp)
 右クリックをすると以下のような購入画面を出すことができます。  
 この画面で左クリックするとチケットを購入できます。
-![券売機の画面](/img/func/kiosk-gui.png)
+![券売機の画面](/img/func/kiosk-gui.webp)
 購入したチケットを持って支払いゲートを右クリックすると改札ゲートが開きます。
-![チケットを支払いゲートに使用している](/img/func/ticket.png)
+![チケットを支払いゲートに使用している](/img/func/ticket.webp)
 
 ## ME倉庫
 初期スポーンの黄色い自販機でこのアイテムを貰ってください。
-![クラフティングターミナルを購入している](/img/func/terminal.png)
+![クラフティングターミナルを購入している](/img/func/terminal.webp)
 右クリックで使用するとこのようが画面が開きます。ここにあるアイテムは自由に利用可能です。
-![クラフティングターミナルのGUI](/img/func/terminal-gui.png)
+![クラフティングターミナルのGUI](/img/func/terminal-gui.webp)
 
 ## ネットショッピング端末
 
