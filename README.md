@@ -14,6 +14,8 @@ npm i
 ```shell
 npm run docs:dev
 ```
+> [!TIP]
+> 変更をコミットするにはフォークした自分のリポジトリにプッシュし、そのあとPRを作成してください。
 
 現在認可以上の鉄道会社の情報のみ追加できます。
 
@@ -44,8 +46,6 @@ npm run docs:dev
 
 ## 会社情報の追加
 /pages/company/RULE.mdのフォーマットを確認し、`/pages/company/<会社名>.md`を作成します。
-
-必ずローカル環境で正しく追加されているかを確認してください。  
 
 > [!IMPORTANT]
 > 情報追加後は`npm run docs:build`でビルドが通るか確認してください。
