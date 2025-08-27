@@ -20,7 +20,7 @@ line:
     number: "01"
 x: 450
 y: 900
-description: ""
+description: "取鳥は,放物,迷鉄,豊急,金鉄が乗り入れる巨大な交通結節点です。"
 ---
 
 # {{ $frontmatter.title }}
@@ -32,14 +32,15 @@ description: ""
 ## 概要
 {{ $frontmatter.description }}  
 管理: [金欠HG](/company/kinketsuHG/), [放物](/company/houbutu/), [迷鉄](/company/meitetsu/)  
-ひらがな: こうか  
-ローマ字: Koka  
-ナンバリング: `B01`, `C01`, `E01`
+ひらがな: とっとり  
+ローマ字: Tottori  
+ナンバリング: `T09`, `E01`, `E04`
 
 ## 乗り入れ路線
-- [<span style="color: #D7817E">理事冠状線 (B)</span>](/company/houbutu/line/rizikanzyousen.md)
-- [<span style="color: #456E2C">書見勧誘線 (C)</span>](/company/houbutu/line/syokenkanyusen.md)
 - [<span style="color: #9577A3">放物連絡線 (E)</span>](/company/houbutu/line/houbuturenrakusen.md)
+- [<span style="color: #2B66B1">豊急本線 (T)</span>](/company/KinketsuHG/toyokyu/line/toyokyuhonsen.md)
+- [<span style="color: #BFFD5B">金欠取鳥線 (E)</span>](/company/KinketsuHG/kinketsu/line/tottorisen.md)
+- [<span style="color: #F19E4C">南北本線 (S)</span>](/company/meitetsu/line/nanbokuhonsenS.md)
 
 ## 名所案内
 - [公営鉄道博物館](/tour/landmark/hakubutukan.md)

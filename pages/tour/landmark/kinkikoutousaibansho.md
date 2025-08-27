@@ -5,7 +5,7 @@ description: "プレイヤー間のトラブルや事件について裁判する
 ---
 
 # {{ $frontmatter.title }}
-![博物館](/img/tour/hakubutukan.webp)
+![博物館](/img/tour/koutousaibansho.webp)
 
 ## 概要
 {{ $frontmatter.description }}  
