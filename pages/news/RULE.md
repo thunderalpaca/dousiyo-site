@@ -1,7 +1,7 @@
 # news/RULE.md
 
 
-以下のfrontmatterを厳守してください。それ以外であれば何をしても大丈夫です。
+以下に示す例を厳守してください。それ以外であれば何をしても大丈夫です。
 
 ```md
 ---
@@ -12,6 +12,14 @@ date: 2025-08-27-12:00:00+09:00
 emergency: true
 ---
 
+<script setup lang="ts">
+import { formatDate } from '../../.vitepress/theme/utils/date'
+</script>
+
+# {{ $frontmatter.title }}
+{{ formatDate($frontmatter.date) }}
+
+## {{ $frontmatter.description }}  
 ```
 `title`: ニュースのタイトルを書いてください。  
 `description`: ニュースの説明を書いてください。  

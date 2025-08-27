@@ -12,7 +12,6 @@ import Numberling from './components/Numberling.vue'
 import Stations from './components/Stations.vue'
 import LinesMap from './components/LinesMap.vue'
 import Sokuho from './components/Sokuho.vue'
-import SokuhoSlider from './components/SokuhoSlider.vue'
 import QuickNews from './components/QuickNews.vue'
 
 export default {
@@ -30,7 +29,6 @@ export default {
     app.component('Stations', Stations)
     app.component('LinesMap', LinesMap)
     app.component('Sokuho', Sokuho)
-    app.component('SokuhoSlider', SokuhoSlider)
     // app.component('QuickNews', QuickNews)
   }
 } satisfies Theme
