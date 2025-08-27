@@ -3,8 +3,7 @@ layout: home
 
 hero:
   name: "名前どうしよ鯖"
-  text: "鉄道、経済、銃、なんでもありのサーバー"
-  tagline: 長い歴史と各鉄道会社について紹介
+  tagline: "鉄道、経済、銃、なんでもありのサーバー"
   image:
     src: /zou-original.webp
     alt: 三様にある偉人の像
@@ -13,11 +12,11 @@ hero:
       text: もっと詳しく!
       link: /tour/guide
     - theme: alt
-      text: 花川山に移住しませんか？
-      link: /station/stations/kasenyama
-    - theme: alt
       text: 機能の説明はこちら
       link: /func
+    - theme: alt
+      text: "ニュース"
+      link: /news
 
 features:
   - title: 鉄道ファースト
@@ -31,6 +30,7 @@ features:
 <br>
 
 # お知らせ
+<SokuhoSlider />
 ## 2025年8月25日
 - [金欠鉄道取鳥線](/company/kinketsuHG/kinketsu/line/tottorisen.md)  
 金欠鉄道取鳥線は1週間~1ヶ月間ほど**試運転取り止め**します  

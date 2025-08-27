@@ -10,9 +10,11 @@ vitepressで作成しています。
 git clone https://github.com/Valine3gDev/dousiyo-site.git
 cd dousiyo-site
 npm i
+npm run docs:dev
 ```
 
-現在認可以上の鉄道会社の情報のみ追加できます。
+現在認可以上の鉄道会社の情報のみ追加できます。必ずローカル環境で正しく追加されているかを確認してください。  
+http://127.0.0.1:5173/data で確認できます。
 ### 駅情報の追加
 /pages/station/RULE.mdのフォーマットを確認し、`/pages/station/stations/<路線名>.md`を作成します。
 
