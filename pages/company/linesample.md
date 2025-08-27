@@ -1,0 +1,22 @@
+---
+layout: doc <- そのまま
+title: "" <- 路線の正式名称を入力
+letter: A <- 路線のナンバリング文字を入力
+color: "#123456" <- ラインカラーを入力
+description: "" <- 路線の説明を入力
+---
+
+# {{ $frontmatter.title }} ({{ $frontmatter.letter }})
+
+## 概要
+{{ $frontmatter.description }}  
+管理: [古囲](/company/furui/index.md)  <- 路線を管理している会社の名前を`[]`内に入力し、()には会社のページのリンクを入力  
+ひらがな: きどうせん <- 路線のひらがな名を入力  
+ローマ字: Kidou Line  <- 路線のローマ字名を入力  
+ラインカラー: <span :style="{backgroundColor: $frontmatter.color, display: 'inline-block', width: '0.75em', height: '0.75em', border: `1px solid #1b1b1f`, marginRight: '0.25em'}" />`{{ $frontmatter.color }}`
+
+## 駅
+<Stations />
+
+
+<!-- 他に書きたい情報がある場合自由に追加してください -->

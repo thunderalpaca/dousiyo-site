@@ -1,0 +1,38 @@
+---
+layout: doc <- そのまま
+title: "" <- 駅の正式名称を入力
+line:
+  houB:  <- 路線のIDを入力
+    prev: null  <- その路線での前の駅のIDを入力、存在しない場合はnullを入力
+    next: "satutaba"  <- その路線での次の駅のIDを入力、存在しない場合はnullを入力
+    number: "01"  <- その路線でのナンバリングの数字を入力
+x: 0  <- そのまま
+y: 0  <- そのまま
+description: ""  <- 駅の説明を入力
+---
+
+# {{ $frontmatter.title }}
+![写真](/img/station/)
+
+<!-- 複数派生駅がある場合、代表駅にのみ追加 -->
+## 他にも{{ $frontmatter.title }}駅があります
+- [東高賀](/station/stations/higashikoka.md)
+- [高賀南](/station/stations/kokaminami.md)
+- [新高賀](/station/stations/sinkoka.md)
+
+## 概要
+{{ $frontmatter.description }}  
+管理: [放物](/company/houbutu/index.md) <- 路線を管理している会社の名前を`[]`内に入力し、`()`には会社のページのリンクを入力  
+ひらがな: こうか  <- 駅のひらがな名を入力  
+ローマ字: Koka  <- 駅のローマ字名を入力  
+ナンバリング: <Numberling />
+
+## 乗り入れ路線
+<LineInfo />
+
+<!-- 名所がある場合に追加してください -->
+## 名所案内
+- VOID
+![VOID](/img/tour/void.webp)
+
+<!-- 他に書きたい情報がある場合自由に追加してください -->
