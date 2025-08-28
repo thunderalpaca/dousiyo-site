@@ -12,6 +12,13 @@ function safeUrl(url: string) {
   const normalized = url.startsWith('/') ? url : '/' + url
   return withBase(normalized)
 }
+
+function urlSlug(url: string) {
+  const path = url.split('?')[0].split('#')[0]
+  const last = path.replace(/\/$/, '').split('/').pop() || ''
+  return last.replace(/\.html$/, '')
+}
+
 const groups = computed(() => {
   const out: Array<{ key: string; items: any[] }> = []
   let currentKey = ''
@@ -35,6 +42,7 @@ const groups = computed(() => {
   <ul>
     <li v-for="station in g.items" :key="station.url">
       <a :href="safeUrl(station.url)">{{ station.frontmatter.title }}</a>
+      <a style="margin-left: 8px;" :href="safeUrl(`/map/auto?station=${urlSlug(station.url)}`)">マップで表示</a>
       <p>{{ station.frontmatter.description }}</p>
     </li>
   </ul>
