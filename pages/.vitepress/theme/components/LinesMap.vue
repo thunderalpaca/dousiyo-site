@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onServerPrefetch, onUnmounted, watch } from 'vue'
 import { loadLines, loadStations, type Line as RawLine, type Station as RawStation } from '../lib/dataLoaders'
+import { useData } from 'vitepress'
+
+const { isDark: vpIsDark } = useData()
 
 interface LineConnection {
     code: string
@@ -100,7 +103,7 @@ function buildRailwayMapData(rawLines: RawLine[], rawStations: RawStation[]): Ra
         canvas: {
             width: 800,
             height: 600,
-            dark: false,
+            dark: vpIsDark.value,
         },
         stations,
         lines,
@@ -321,7 +324,7 @@ function connectionPath(conn: LineConnectionRendered): string {
         </button>
         <div class="svg-container">
             <svg class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
-                role="img" aria-label="路線図キャンバス" :style="{ backgroundColor: dark ? '#222' : 'white' }">
+                role="img" aria-label="路線図キャンバス" :style="{ backgroundColor: dark ? '#222' : 'white', border: dark ? '1px solid #444' : '1px solid #ccc' }">
 
                 <g>
                     <rect x="8" y="8" width="44" :height="(lines.length * 20) + 4" :fill="dark ? '#222' : '#f5f5f5'"
@@ -387,7 +390,6 @@ function connectionPath(conn: LineConnectionRendered): string {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #808080;
     overflow: auto;
     max-height: 80vh;
     padding: 8px;
