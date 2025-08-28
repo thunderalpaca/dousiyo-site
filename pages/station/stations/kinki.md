@@ -16,7 +16,7 @@ line:
     number: "02"
 x: 700
 y: 950
-description: ""
+description: "金鉄線の駅は現在工事中"
 ---
 
 # {{ $frontmatter.title }}
