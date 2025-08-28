@@ -19,7 +19,7 @@ y: 350
 description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、放物連絡線へのアクセスも可能です。"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 ![入口](/img/station/banzyo/front.webp)
 ![ホーム](/img/station/banzyo/platform.webp)
 

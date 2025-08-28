@@ -23,7 +23,7 @@ y: 900
 description: ""
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 <!-- ![高賀駅を正面から見ている](/img/tour/koka.webp) -->
 
 ## 他にも{{ $frontmatter.title }}があります

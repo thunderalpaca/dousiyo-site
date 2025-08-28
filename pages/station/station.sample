@@ -11,7 +11,7 @@ y: 0  <- そのまま
 description: ""  <- 駅の説明を入力
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 ![写真](/img/station/)
 
 <!-- 複数派生駅がある場合、代表駅にのみ追加 -->

@@ -11,7 +11,7 @@ y: 500
 description: "初期スポーンにある放物の駅。珍しい1面1線構造。"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 ![正面](/img/station/sanyo/front.webp)
 ![ホーム](/img/station/sanyo/platform.webp)
 

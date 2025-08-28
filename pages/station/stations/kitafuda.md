@@ -11,7 +11,7 @@ y: 400
 description: "干鉄の北札束と乗り換え可能"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 ![ホーム](/img/station/kitafuda/image.webp)
 
 ## 概要

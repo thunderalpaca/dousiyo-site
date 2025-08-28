@@ -11,7 +11,7 @@ y: 450
 description: "札束駅は、札束財閥の本社前に位置し、三味線との乗り換えが可能な理事冠状線の駅です。"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 ![入口](/img/station/satutaba/front.webp)
 ![ホーム](/img/station/satutaba/platform.webp)
 

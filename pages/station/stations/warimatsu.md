@@ -15,7 +15,7 @@ y: 800
 description: ""
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 <!-- ![駅の写真の説明](駅の写真のURL) -->
 
 ## 概要
