@@ -1,10 +1,10 @@
 <template>
-    <a :href="`/map/auto?station=${stationId}`" style="margin-left: 10px; font-size: small;">マップで表示</a>
+  <a :href="href" style="font-size: small;">マップで表示</a>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, withBase } from 'vitepress'
 
 const route = useRoute()
 const stationId = computed(() => {
@@ -12,4 +12,6 @@ const stationId = computed(() => {
   const last = parts[parts.length - 1] || ''
   return last.replace(/\.html$/, '')
 })
+
+const href = computed(() => withBase(`/map/auto?station=${encodeURIComponent(stationId.value)}`))
 </script>
