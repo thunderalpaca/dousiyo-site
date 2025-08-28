@@ -355,6 +355,9 @@ function connectionPath(conn: LineConnectionRendered): string {
 
                 <!-- 駅の描画 -->
                 <template v-for="station in stations" :key="station.id">
+                    <g v-if="station.id === props.station">
+                        <circle :cx="station.x" :cy="station.y" r="10" fill="none" class="guide-circle"/>
+                    </g>
                     <g v-if="!station.not_station">
                         <a :href="station.url">
                             <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2" :class="{highlight: station.id === props.station}" />
@@ -433,13 +436,29 @@ svg {
 }
 
 .highlight {
-    stroke: #ff0000 !important;
+    stroke: #ff3b30 !important;
     animation: highlight 1s ease-in-out infinite;
 }
 
 .rainbow {
     stroke-width: 1;
     animation: rainbow 3s linear infinite;
+}
+
+.guide-circle {
+    stroke: #ff3b30;
+    animation: guide-pulse 5s ease-out infinite;
+}
+
+@keyframes guide-pulse {
+    0% {
+        stroke-width: 0;
+        opacity: 1;
+    }
+    100% {
+        stroke-width: 1000;
+        opacity: 0;
+    }
 }
 
 @keyframes highlight {
@@ -455,12 +474,12 @@ svg {
 }
 
 @keyframes rainbow {
-    0%   { stroke: #ff3b30; }
-    16%  { stroke: #ff9500; }
-    33%  { stroke: #ffcc00; }
-    50%  { stroke: #34c759; }
-    66%  { stroke: #007aff; }
-    83%  { stroke: #5856d6; }
-    100% { stroke: #ff3b30; }
+    0%   { fill: #ff3b30; }
+    16%  { fill: #ff9500; }
+    33%  { fill: #ffcc00; }
+    50%  { fill: #34c759; }
+    66%  { fill: #007aff; }
+    83%  { fill: #5856d6; }
+    100% { fill: #ff3b30; }
 }
 </style>
