@@ -15,7 +15,7 @@ y: 300
 description: "楓ヶ丘駅は、南北本線と理事冠状線の接続駅で、近くには楓ヶ丘サーキットがあります。"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 ### 迷鉄楓ヶ丘
 ![迷鉄の入口](/img/station/kaedegaoka/meitetsu.webp)
 ### 放物楓ヶ丘

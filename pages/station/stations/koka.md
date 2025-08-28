@@ -19,7 +19,7 @@ y: 500
 description: "高賀駅は、3路線が乗り入れる6面10線の大規模な放物の駅です。"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 ![高賀駅を正面から見ている](/img/tour/koka.webp)
 
 ## 他にも{{ $frontmatter.title }}駅があります

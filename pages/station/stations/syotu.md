@@ -19,7 +19,7 @@ y: 600
 description: "小津駅は、放物連絡線と空港誘導線、丈北送信線の接続駅で、豊急との乗り換えも可能です。"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 <!-- ![駅の写真の説明](駅の写真のURL) -->
 
 ## 概要

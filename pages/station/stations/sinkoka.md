@@ -11,7 +11,7 @@ y: 500
 description: "高賀の北の方にあるゆれつばめの駅。"
 ---
 
-# {{ $frontmatter.title }}
+# {{ $frontmatter.title }} <ViewinMap />
 <!-- ![高賀駅を正面から見ている](/img/tour/koka.webp) -->
 
 ## 概要
