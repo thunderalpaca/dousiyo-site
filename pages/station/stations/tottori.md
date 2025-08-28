@@ -34,13 +34,10 @@ description: "取鳥は,放物,迷鉄,豊急,金鉄が乗り入れる巨大な�
 管理: [金欠HG](/company/kinketsuHG/), [放物](/company/houbutu/), [迷鉄](/company/meitetsu/)  
 ひらがな: とっとり  
 ローマ字: Tottori  
-ナンバリング: `T09`, `E01`, `E04`
+ナンバリング: <Numberling />
 
 ## 乗り入れ路線
-- [<span style="color: #9577A3">放物連絡線 (E)</span>](/company/houbutu/line/houbuturenrakusen.md)
-- [<span style="color: #2B66B1">豊急本線 (T)</span>](/company/KinketsuHG/toyokyu/line/toyokyuhonsen.md)
-- [<span style="color: #BFFD5B">金欠取鳥線 (E)</span>](/company/KinketsuHG/kinketsu/line/tottorisen.md)
-- [<span style="color: #F19E4C">南北本線 (S)</span>](/company/meitetsu/line/nanbokuhonsenS.md)
+<LineInfo />
 
 ## 名所案内
 - [公営鉄道博物館](/tour/landmark/hakubutukan.md)
