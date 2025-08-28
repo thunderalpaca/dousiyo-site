@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "お"
+title: "泓"
 line:
   kinE:
     prev: "tsurushiwan"
