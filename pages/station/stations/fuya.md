@@ -1,6 +1,6 @@
 ---
 layout: doc
-title: "ふや"
+title: "芣野"
 line:
   kinE:
     prev: "shikishima"
