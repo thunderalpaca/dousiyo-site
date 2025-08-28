@@ -265,6 +265,52 @@ onMounted(() => {
 onUnmounted(() => {
     document.removeEventListener('fullscreenchange', onFsChange)
 })
+
+const EPS = 1e-6
+const DIAG_EPS = 1e-6
+const CURVE_STRENGTH = 0.3
+const CURVE_MAX_OFFSET = 60
+const CURVE_BIAS = 0
+
+function isAxisAligned(a: { x: number; y: number }, b: { x: number; y: number }, eps = EPS) {
+    return Math.abs(a.x - b.x) < eps || Math.abs(a.y - b.y) < eps
+}
+
+function isDiagonal45(a: { x: number; y: number }, b: { x: number; y: number }, eps = DIAG_EPS) {
+    const dx = Math.abs(a.x - b.x)
+    const dy = Math.abs(a.y - b.y)
+    if (dx < eps || dy < eps) return false
+    return Math.abs(dx - dy) < eps
+}
+
+function connectionPath(conn: LineConnectionRendered): string {
+    const x1 = conn.from.x, y1 = conn.from.y
+    const x2 = conn.to.x, y2 = conn.to.y
+    if (isAxisAligned(conn.from, conn.to, EPS) || isDiagonal45(conn.from, conn.to, DIAG_EPS)) {
+        // 直線
+        return `M ${x1},${y1} L ${x2},${y2}`
+    }
+
+    const dx = x2 - x1
+    const dy = y2 - y1
+    const dist = Math.hypot(dx, dy) || 1
+
+    const mx = (x1 + x2) / 2
+    const my = (y1 + y2) / 2
+
+    const sideSign = 1
+    const nx = (-dy / dist) * sideSign
+    const ny = (dx / dist) * sideSign
+
+    const k = Math.min(CURVE_MAX_OFFSET, dist * CURVE_STRENGTH)
+    const bias = CURVE_BIAS
+
+    const c1x = mx + nx * k - dx * bias
+    const c1y = my + ny * k - dy * bias
+    const c2x = mx + nx * k + dx * bias
+    const c2y = my + ny * k + dy * bias
+    return `M ${x1},${y1} C ${c1x},${c1y} ${c2x},${c2y} ${x2},${y2}`
+}
 </script>
 
 <template>
@@ -300,8 +346,9 @@ onUnmounted(() => {
                 <!-- 路線の描画 -->
                 <template v-for="(connection, i) in lineConnections"
                     :key="`conn-${i}-${connection.from.id}-${connection.to.id}`">
-                    <line :x1="connection.from.x" :y1="connection.from.y" :x2="connection.to.x" :y2="connection.to.y"
+                    <path :d="connectionPath(connection)" fill="none"
                         :stroke="connection.line.color || '#000'" :stroke-width="connection.line.width || 4"
+                        stroke-linecap="round" stroke-linejoin="round"
                         :stroke-dasharray="connection.line.type === 'dot' ? '4, 4' : undefined" />
                 </template>
 
