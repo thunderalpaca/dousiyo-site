@@ -55,6 +55,7 @@ type LineConnectionRendered = {
 const props = defineProps<{
     data?: RailwayMapData
     fullscreen?: boolean
+    station?: Station["id"]
 }>()
 
 const emit = defineEmits<{
@@ -316,7 +317,7 @@ function connectionPath(conn: LineConnectionRendered): string {
 <template>
     <main class="viewer" ref="mainEl" :class="{ fullscreen: isFullscreen }">
         <button class="fullscreen-toggle" type="button" @click="isFullscreen ? exitFullscreen() : enterFullscreen()">
-            {{ isFullscreen ? 'Exit Fullscreen' : 'Fullscreen' }}
+            {{ isFullscreen ? 'フルスクリーンを終了' : 'フルスクリーン' }}
         </button>
         <div class="svg-container">
             <svg class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
@@ -356,8 +357,8 @@ function connectionPath(conn: LineConnectionRendered): string {
                 <template v-for="station in stations" :key="station.id">
                     <g v-if="!station.not_station">
                         <a :href="station.url">
-                            <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2" />
-                            <text :x="station.x" :y="station.y - 15" text-anchor="middle" class="station-label"
+                            <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2" :class="{highlight: station.id === props.station}" />
+                            <text :x="station.x" :y="station.y - 15" text-anchor="middle" class="station-label" :class="{rainbow: station.id === props.station}"
                                 :fill="dark ? '#fff' : '#000'"
                                 :transform="`rotate(-60 ${station.x}, ${station.y - 15})`">{{
                                     getStationDisplayText(station, lines) }}</text>
@@ -425,10 +426,41 @@ svg {
 
 .fullscreen-toggle {
     position: absolute;
-    top: 8px;
+    top: 20px;
     right: 8px;
     z-index: 1;
     padding: 6px 10px;
-    font-size: 12px;
+}
+
+.highlight {
+    stroke: #ff0000 !important;
+    animation: highlight 1s ease-in-out infinite;
+}
+
+.rainbow {
+    stroke-width: 1;
+    animation: rainbow 3s linear infinite;
+}
+
+@keyframes highlight {
+    0% {
+        stroke-width: 2;
+    }
+    50% {
+        stroke-width: 10;
+    }
+    100% {
+        stroke-width: 2;
+    }
+}
+
+@keyframes rainbow {
+    0%   { stroke: #ff3b30; }
+    16%  { stroke: #ff9500; }
+    33%  { stroke: #ffcc00; }
+    50%  { stroke: #34c759; }
+    66%  { stroke: #007aff; }
+    83%  { stroke: #5856d6; }
+    100% { stroke: #ff3b30; }
 }
 </style>
