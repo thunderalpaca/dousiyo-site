@@ -18,6 +18,8 @@ function safeUrl(url: string) {
 
 </script>
 
+<Sokuho />
+
 ## 記事一覧
 
 <ul>
