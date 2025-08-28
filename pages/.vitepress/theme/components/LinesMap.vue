@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, onServerPrefetch, onUnmounted, watch } from 'vue'
 import { loadLines, loadStations, type Line as RawLine, type Station as RawStation } from '../lib/dataLoaders'
+import { useData } from 'vitepress'
+
+const { isDark: vpIsDark } = useData()
 
 interface LineConnection {
     code: string
@@ -100,7 +103,7 @@ function buildRailwayMapData(rawLines: RawLine[], rawStations: RawStation[]): Ra
         canvas: {
             width: 800,
             height: 600,
-            dark: false,
+            dark: vpIsDark.value,
         },
         stations,
         lines,
@@ -321,7 +324,7 @@ function connectionPath(conn: LineConnectionRendered): string {
         </button>
         <div class="svg-container">
             <svg class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
-                role="img" aria-label="路線図キャンバス" :style="{ backgroundColor: dark ? '#222' : 'white' }">
+                role="img" aria-label="路線図キャンバス" :style="{ backgroundColor: dark ? '#222' : 'white', border: dark ? '1px solid #444' : '1px solid #ccc' }">
 
                 <g>
                     <rect x="8" y="8" width="44" :height="(lines.length * 20) + 4" :fill="dark ? '#222' : '#f5f5f5'"
@@ -355,6 +358,9 @@ function connectionPath(conn: LineConnectionRendered): string {
 
                 <!-- 駅の描画 -->
                 <template v-for="station in stations" :key="station.id">
+                    <g v-if="station.id === props.station">
+                        <circle :cx="station.x" :cy="station.y" r="10" fill="none" class="guide-circle"/>
+                    </g>
                     <g v-if="!station.not_station">
                         <a :href="station.url">
                             <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2" :class="{highlight: station.id === props.station}" />
@@ -384,7 +390,6 @@ function connectionPath(conn: LineConnectionRendered): string {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #808080;
     overflow: auto;
     max-height: 80vh;
     padding: 8px;
@@ -433,13 +438,29 @@ svg {
 }
 
 .highlight {
-    stroke: #ff0000 !important;
+    stroke: #ff3b30 !important;
     animation: highlight 1s ease-in-out infinite;
 }
 
 .rainbow {
     stroke-width: 1;
     animation: rainbow 3s linear infinite;
+}
+
+.guide-circle {
+    stroke: #ff3b30;
+    animation: guide-pulse 5s ease-out infinite;
+}
+
+@keyframes guide-pulse {
+    0% {
+        stroke-width: 0;
+        opacity: 1;
+    }
+    100% {
+        stroke-width: 1000;
+        opacity: 0;
+    }
 }
 
 @keyframes highlight {
@@ -455,12 +476,12 @@ svg {
 }
 
 @keyframes rainbow {
-    0%   { stroke: #ff3b30; }
-    16%  { stroke: #ff9500; }
-    33%  { stroke: #ffcc00; }
-    50%  { stroke: #34c759; }
-    66%  { stroke: #007aff; }
-    83%  { stroke: #5856d6; }
-    100% { stroke: #ff3b30; }
+    0%   { fill: #ff3b30; }
+    16%  { fill: #ff9500; }
+    33%  { fill: #ffcc00; }
+    50%  { fill: #34c759; }
+    66%  { fill: #007aff; }
+    83%  { fill: #5856d6; }
+    100% { fill: #ff3b30; }
 }
 </style>
