@@ -26,7 +26,7 @@ function safeUrl(url: string) {
   <ul>
     <li v-for="car in group.children" :key="car.url">
       <a :href="safeUrl(car.url)">{{ car.frontmatter.title }}</a>
-      <p>{{ car.frontmatter.description }}</p>
+      <span v-if="car.frontmatter.description"><br>{{ car.frontmatter.description }}</span>
     </li>
   </ul>
 </div>

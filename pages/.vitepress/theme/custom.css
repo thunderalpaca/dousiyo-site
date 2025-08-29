@@ -4,3 +4,6 @@
   word-break: keep-all;
 }
 
+.controll__item--circle .controll__item--circle__inner li[data-v-3ba139de] {
+  margin-top: 0 !important;
+}

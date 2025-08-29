@@ -1,5 +1,6 @@
 ---
 layout: home
+title: "路線図"
 description: "路線図"
 ---
 

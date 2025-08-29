@@ -43,7 +43,7 @@ const groups = computed(() => {
     <li v-for="station in g.items" :key="station.url">
       <a :href="safeUrl(station.url)">{{ station.frontmatter.title }}</a>
       <a style="margin-left: 8px;" :href="safeUrl(`/map/auto?station=${urlSlug(station.url)}`)">マップで表示</a>
-      <p>{{ station.frontmatter.description }}</p>
+      <span v-if="station.frontmatter.description"><br>{{ station.frontmatter.description }}</span>
     </li>
   </ul>
 </section>
