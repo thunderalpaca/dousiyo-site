@@ -3,6 +3,9 @@ import { computed, ref, onMounted, onServerPrefetch, onUnmounted, watch } from '
 import { loadLines, loadStations, type Line as RawLine, type Station as RawStation } from '../lib/dataLoaders'
 import { useData } from 'vitepress'
 
+import VueZoomable from "vue-zoomable";
+import "vue-zoomable/dist/style.css";
+
 const { isDark: vpIsDark } = useData()
 
 interface LineConnection {
@@ -322,81 +325,73 @@ function connectionPath(conn: LineConnectionRendered): string {
         <button class="fullscreen-toggle" type="button" @click="isFullscreen ? exitFullscreen() : enterFullscreen()">
             {{ isFullscreen ? 'フルスクリーンを終了' : 'フルスクリーン' }}
         </button>
-        <div class="svg-container">
-            <svg class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
-                role="img" aria-label="路線図キャンバス"
-                :style="{ backgroundColor: dark ? '#222' : 'white', border: dark ? '1px solid #444' : '1px solid #ccc' }">
+        <VueZoomable :style="{ width: '100%', height: isFullscreen ? '100vh' : '80vh' }" selector=".svg-container" :minZoom="0.1" :maxZoom="5" :buttonZoomStep="0.5" :wheelZoomStep="0.1">
+            <div class="svg-container">
+                <svg class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
+                    role="img" aria-label="路線図キャンバス"
+                    :style="{ backgroundColor: dark ? '#222' : 'white', border: dark ? '1px solid #444' : '1px solid #ccc' }">
 
-                <g>
-                    <rect x="8" y="8" width="44" :height="(lines.length * 20) + 4" :fill="dark ? '#222' : '#f5f5f5'"
-                        stroke="#ccc" />
+                    <g>
+                        <rect x="8" y="8" width="44" :height="(lines.length * 20) + 4" :fill="dark ? '#222' : '#f5f5f5'"
+                            stroke="#ccc" />
 
-                    <template v-for="(line, i) in lines" :key="`legend-color-${line.id}`">
-                        <rect x="10" :y="10 + i * 20" width="40" height="20" :fill="line.color" />
-                        <a :href="line.url"><text x="12" :y="30 + i * 20 - 5" font-size="13"
-                                :fill="isColorLight(line.color)">{{
-                                    `${(line.id || '').slice(3)}01` }}</text></a>
-                    </template>
+                        <template v-for="(line, i) in lines" :key="`legend-color-${line.id}`">
+                            <rect x="10" :y="10 + i * 20" width="40" height="20" :fill="line.color" />
+                            <a :href="line.url"><text x="12" :y="30 + i * 20 - 5" font-size="13"
+                                    :fill="isColorLight(line.color)">{{
+                                        `${(line.id || '').slice(3)}01` }}</text></a>
+                        </template>
 
-                    <rect x="52" y="8" :width="dynamicRectWidth" :height="(lines.length * 20) + 4"
-                        :fill="dark ? '#222' : '#f5f5f5'" stroke="#ccc" />
+                        <rect x="52" y="8" :width="dynamicRectWidth" :height="(lines.length * 20) + 4"
+                            :fill="dark ? '#222' : '#f5f5f5'" stroke="#ccc" />
 
-                    <template v-for="(line, i) in lines" :key="`legend-name-${line.id}`">
-                        <a :href="line.url"><text x="54" :y="30 + i * 20 - 5" font-size="13"
-                                :fill="dark ? '#fff' : '#000'">{{ line.name
-                                }}</text></a>
-                    </template>
-                </g>
-
-                <!-- 路線の描画 -->
-                <template v-for="(connection, i) in lineConnections"
-                    :key="`conn-${i}-${connection.from.id}-${connection.to.id}`">
-                    <path :d="connectionPath(connection)" fill="none" :stroke="connection.line.color || '#000'"
-                        :stroke-width="connection.line.width || 4" stroke-linecap="round" stroke-linejoin="round"
-                        :stroke-dasharray="connection.line.type === 'dot' ? '4, 4' : undefined" />
-                </template>
-
-                <!-- 駅の描画 -->
-                <template v-for="station in stations" :key="station.id">
-                    <g v-if="station.id === props.station">
-                        <circle :cx="station.x" :cy="station.y" r="10" fill="none" class="guide-circle" />
+                        <template v-for="(line, i) in lines" :key="`legend-name-${line.id}`">
+                            <a :href="line.url"><text x="54" :y="30 + i * 20 - 5" font-size="13"
+                                    :fill="dark ? '#fff' : '#000'">{{ line.name
+                                    }}</text></a>
+                        </template>
                     </g>
-                    <g v-if="!station.not_station">
-                        <a :href="station.url">
+
+                    <!-- 路線の描画 -->
+                    <template v-for="(connection, i) in lineConnections"
+                        :key="`conn-${i}-${connection.from.id}-${connection.to.id}`">
+                        <path :d="connectionPath(connection)" fill="none" :stroke="connection.line.color || '#000'"
+                            :stroke-width="connection.line.width || 4" stroke-linecap="round" stroke-linejoin="round"
+                            :stroke-dasharray="connection.line.type === 'dot' ? '4, 4' : undefined" />
+                    </template>
+
+                    <!-- 駅の描画 -->
+                    <template v-for="station in stations" :key="station.id">
+                        <g v-if="station.id === props.station">
+                            <circle :cx="station.x" :cy="station.y" r="10" fill="none" class="guide-circle" />
+                        </g>
+                        <g v-if="!station.not_station">
+                            <a :href="station.url">
+                                <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333"
+                                    stroke-width="2" :class="{ highlight: station.id === props.station }" />
+                            </a>
+                            <text :x="station.x" :y="station.y - 15" text-anchor="middle" class="station-label"
+                                :class="{ rainbow: station.id === props.station }" :fill="dark ? '#fff' : '#000'"
+                                :transform="`rotate(-60 ${station.x}, ${station.y - 15})`">{{
+                                    getStationDisplayText(station, lines) }}</text>
+
+                        </g>
+                        <g v-else>
                             <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2"
-                                :class="{ highlight: station.id === props.station }" />
-                        </a>
-                        <text :x="station.x" :y="station.y - 15" text-anchor="middle" class="station-label"
-                            :class="{ rainbow: station.id === props.station }" :fill="dark ? '#fff' : '#000'"
-                            :transform="`rotate(-60 ${station.x}, ${station.y - 15})`">{{
+                                class="virtual-station" />
+                            <text :x="station.x" :y="station.y" text-anchor="middle"
+                                class="station-label virtual-station" :fill="dark ? '#fff' : '#000'">{{
                                 getStationDisplayText(station, lines) }}</text>
-
-                    </g>
-                    <g v-else>
-                        <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2"
-                            class="virtual-station" />
-                        <text :x="station.x" :y="station.y" text-anchor="middle" class="station-label virtual-station"
-                            :fill="dark ? '#fff' : '#000'">{{ getStationDisplayText(station, lines) }}</text>
-                    </g>
-                </template>
-            </svg>
-        </div>
+                        </g>
+                    </template>
+                </svg>
+            </div>
+        </VueZoomable>
     </main>
 
 </template>
 
 <style scoped>
-.viewer {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    overflow: auto;
-    max-height: 80vh;
-    padding: 8px;
-}
-
 .viewer.fullscreen {
     position: fixed;
     inset: 0;
@@ -451,7 +446,7 @@ svg {
 
 .guide-circle {
     stroke: #ff3b30;
-    animation: guide-pulse 5s ease-out infinite;
+    animation: guide-pulse 2.5s ease-out infinite;
 }
 
 @keyframes guide-pulse {
@@ -461,7 +456,7 @@ svg {
     }
 
     100% {
-        stroke-width: 1000;
+        stroke-width: 500;
         opacity: 0;
     }
 }
