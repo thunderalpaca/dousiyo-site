@@ -324,7 +324,8 @@ function connectionPath(conn: LineConnectionRendered): string {
         </button>
         <div class="svg-container">
             <svg class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
-                role="img" aria-label="路線図キャンバス" :style="{ backgroundColor: dark ? '#222' : 'white', border: dark ? '1px solid #444' : '1px solid #ccc' }">
+                role="img" aria-label="路線図キャンバス"
+                :style="{ backgroundColor: dark ? '#222' : 'white', border: dark ? '1px solid #444' : '1px solid #ccc' }">
 
                 <g>
                     <rect x="8" y="8" width="44" :height="(lines.length * 20) + 4" :fill="dark ? '#222' : '#f5f5f5'"
@@ -350,25 +351,26 @@ function connectionPath(conn: LineConnectionRendered): string {
                 <!-- 路線の描画 -->
                 <template v-for="(connection, i) in lineConnections"
                     :key="`conn-${i}-${connection.from.id}-${connection.to.id}`">
-                    <path :d="connectionPath(connection)" fill="none"
-                        :stroke="connection.line.color || '#000'" :stroke-width="connection.line.width || 4"
-                        stroke-linecap="round" stroke-linejoin="round"
+                    <path :d="connectionPath(connection)" fill="none" :stroke="connection.line.color || '#000'"
+                        :stroke-width="connection.line.width || 4" stroke-linecap="round" stroke-linejoin="round"
                         :stroke-dasharray="connection.line.type === 'dot' ? '4, 4' : undefined" />
                 </template>
 
                 <!-- 駅の描画 -->
                 <template v-for="station in stations" :key="station.id">
                     <g v-if="station.id === props.station">
-                        <circle :cx="station.x" :cy="station.y" r="10" fill="none" class="guide-circle"/>
+                        <circle :cx="station.x" :cy="station.y" r="10" fill="none" class="guide-circle" />
                     </g>
                     <g v-if="!station.not_station">
                         <a :href="station.url">
-                            <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2" :class="{highlight: station.id === props.station}" />
-                            <text :x="station.x" :y="station.y - 15" text-anchor="middle" class="station-label" :class="{rainbow: station.id === props.station}"
-                                :fill="dark ? '#fff' : '#000'"
-                                :transform="`rotate(-60 ${station.x}, ${station.y - 15})`">{{
-                                    getStationDisplayText(station, lines) }}</text>
+                            <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2"
+                                :class="{ highlight: station.id === props.station }" />
                         </a>
+                        <text :x="station.x" :y="station.y - 15" text-anchor="middle" class="station-label"
+                            :class="{ rainbow: station.id === props.station }" :fill="dark ? '#fff' : '#000'"
+                            :transform="`rotate(-60 ${station.x}, ${station.y - 15})`">{{
+                                getStationDisplayText(station, lines) }}</text>
+
                     </g>
                     <g v-else>
                         <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333" stroke-width="2"
@@ -457,6 +459,7 @@ svg {
         stroke-width: 0;
         opacity: 1;
     }
+
     100% {
         stroke-width: 1000;
         opacity: 0;
@@ -467,21 +470,43 @@ svg {
     0% {
         stroke-width: 2;
     }
+
     50% {
         stroke-width: 10;
     }
+
     100% {
         stroke-width: 2;
     }
 }
 
 @keyframes rainbow {
-    0%   { fill: #ff3b30; }
-    16%  { fill: #ff9500; }
-    33%  { fill: #ffcc00; }
-    50%  { fill: #34c759; }
-    66%  { fill: #007aff; }
-    83%  { fill: #5856d6; }
-    100% { fill: #ff3b30; }
+    0% {
+        fill: #ff3b30;
+    }
+
+    16% {
+        fill: #ff9500;
+    }
+
+    33% {
+        fill: #ffcc00;
+    }
+
+    50% {
+        fill: #34c759;
+    }
+
+    66% {
+        fill: #007aff;
+    }
+
+    83% {
+        fill: #5856d6;
+    }
+
+    100% {
+        fill: #ff3b30;
+    }
 }
 </style>
