@@ -1,6 +1,7 @@
 ---
 layout: home
 title: "自動生成マップ"
+description: "自動生成マップ"
 ---
 
 <script setup lang="ts">
