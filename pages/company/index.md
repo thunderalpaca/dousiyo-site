@@ -7,7 +7,7 @@ hero:
   tagline: 各鉄道会社について紹介
 ---
 
-## 軍事会社
+## 民間軍事会社
 
 - [札束](/company/satsutaba)
 
