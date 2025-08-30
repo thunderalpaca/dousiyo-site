@@ -1,5 +1,6 @@
 ---
 layout: home
+title: "ホーム"
 
 hero:
   name: "名前どうしよ鯖"
@@ -12,11 +13,11 @@ hero:
       text: もっと詳しく!
       link: /tour/guide
     - theme: alt
-      text: 機能の説明はこちら
-      link: /func
+      text: "ルールはこちら"
+      link: /rule
     - theme: alt
-      text: "ニュース"
-      link: /news
+      text: 機能説明はこちら
+      link: /func
 
 features:
   - title: 鉄道ファースト
@@ -28,8 +29,10 @@ features:
 ---
 
 <br>
+<br>
 
-# お知らせ
+<SokuhoSlider />
+
 ## 2025年8月25日
 - [金欠鉄道取鳥線](/company/kinketsuHG/kinketsu/line/tottorisen.md)  
 金欠鉄道取鳥線は1週間~1ヶ月間ほど**試運転取り止め**します  

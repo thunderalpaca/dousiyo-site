@@ -1,5 +1,5 @@
 <template>
-  <div class="marqueebox">
+  <div v-if="emergencyNews.length" class="marqueebox">
     <Vue3Marquee v-if="emergencyNews.length" :pauseOnHover="true" :clone="true" :duration="1">
       <div v-for="item in emergencyNews" :key="item.url">
         <a :href="item.url" style="font-weight: 600;">

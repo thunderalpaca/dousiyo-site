@@ -8,6 +8,9 @@ hero:
       text: 初見さん向けガイドはこちら
       link: /tour/guide
     - theme: alt
+      text: 機能説明
+      link: /func
+    - theme: alt
       text: 歴史
       link: /history
 ---
