@@ -27,11 +27,11 @@ export default defineConfig({
       provider: 'local'
     },
     nav: [
-      { text: '機能説明', link: '/func' },
+      { text: 'ニュース', link: '/news' },
       { text: '鉄道', link: '/railway' },
       { text: '路線図', link: '/map' },
-      { text: '法律', link: '/law' },
       { text: '観光', link: '/tour' },
+      { text: '法律', link: '/law' },
     ],
 
     socialLinks: [

@@ -13,10 +13,10 @@ hero:
       text: もっと詳しく!
       link: /tour/guide
     - theme: alt
-      text: "ルール"
+      text: "ルールはこちら"
       link: /rule
     - theme: alt
-      text: 機能の説明はこちら
+      text: 機能説明はこちら
       link: /func
 
 features:
