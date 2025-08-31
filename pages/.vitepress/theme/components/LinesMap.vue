@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, onServerPrefetch, onUnmounted, watch } from 'vue'
+import { computed, ref, onMounted, onServerPrefetch, onUnmounted, watch, nextTick } from 'vue'
 import { loadLines, loadStations, type Line as RawLine, type Station as RawStation } from '../lib/dataLoaders'
 import { useData } from 'vitepress'
 
@@ -67,6 +67,8 @@ const props = defineProps<{
 const emit = defineEmits<{
     (e: 'update:fullscreen', value: boolean): void
 }>()
+
+const svgEl = ref<SVGSVGElement | null>(null)
 
 // dataLoaders の出力から本コンポーネントの表示用データへ変換
 function buildRailwayMapData(rawLines: RawLine[], rawStations: RawStation[]): RailwayMapData {
@@ -318,6 +320,52 @@ function connectionPath(conn: LineConnectionRendered): string {
     const c2y = my + ny * k + dy * bias
     return `M ${x1},${y1} C ${c1x},${c1y} ${c2x},${c2y} ${x2},${y2}`
 }
+
+
+function downloadSvgAsPng(svg: SVGSVGElement, filename = 'lines-map.png', scale = 1, bgColor?: string) {
+    const serializer = new XMLSerializer()
+    let source = serializer.serializeToString(svg)
+    if (!/^<svg[^>]+xmlns=/.test(source)) {
+        source = source.replace(/^<svg/, '<svg xmlns="http://www.w3.org/2000/svg"')
+    }
+    const svgUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(source)
+    const img = new Image()
+    img.onload = () => {
+        const baseW = svg.width.baseVal.value || svg.viewBox.baseVal.width
+        const baseH = svg.height.baseVal.value || svg.viewBox.baseVal.height
+        const outW = Math.max(1, Math.round(baseW * scale))
+        const outH = Math.max(1, Math.round(baseH * scale))
+        const canvas = document.createElement('canvas')
+        canvas.width = outW
+        canvas.height = outH
+        const ctx = canvas.getContext('2d')
+        if (!ctx) return
+        const bg = bgColor || getComputedStyle(svg).backgroundColor || '#ffffff'
+        ctx.fillStyle = bg
+        ctx.fillRect(0, 0, outW, outH)
+        ctx.drawImage(img, 0, 0, outW, outH)
+        canvas.toBlob((blob) => {
+            if (!blob) return
+            const a = document.createElement('a')
+            a.href = URL.createObjectURL(blob)
+            a.download = filename
+            a.click()
+            URL.revokeObjectURL(a.href)
+        }, 'image/png')
+    }
+    img.src = svgUrl
+}
+
+async function exportNowSimple() {
+  const scale = 3
+  await nextTick()
+  const svg = svgEl.value
+  if (!svg) {
+    return
+  }
+  const bg = dark.value ? '#222' : '#ffffff'
+  downloadSvgAsPng(svg, `lines-map-${scale}x.png`, scale, bg)
+}
 </script>
 
 <template>
@@ -325,9 +373,10 @@ function connectionPath(conn: LineConnectionRendered): string {
         <button class="fullscreen-toggle" type="button" @click="isFullscreen ? exitFullscreen() : enterFullscreen()">
             {{ isFullscreen ? 'フルスクリーンを終了' : 'フルスクリーン' }}
         </button>
+        <button class="export-btn" type="button" @click="exportNowSimple">ダウンロード</button>
         <VueZoomable :style="{ width: '100%', height: isFullscreen ? '100vh' : '80vh' }" selector=".svg-container" :minZoom="0.1" :maxZoom="5" :buttonZoomStep="0.5" :wheelZoomStep="0.1">
             <div class="svg-container">
-                <svg class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
+                <svg ref="svgEl" xmlns="http://www.w3.org/2000/svg" class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
                     role="img" aria-label="路線図キャンバス"
                     :style="{ backgroundColor: dark ? '#222' : 'white', border: dark ? '1px solid #444' : '1px solid #ccc' }">
 
@@ -432,6 +481,13 @@ svg {
     right: 8px;
     z-index: 1;
     padding: 6px 10px;
+}
+.export-btn {
+  position: absolute;
+  top: 56px;
+  right: 8px;
+  z-index: 1;
+  padding: 6px 10px;
 }
 
 .highlight {
