@@ -20,11 +20,14 @@ hero:
       link: /func
 
 features:
-  - title: 鉄道ファースト
+  - icon: 🚃
+    title: 鉄道ファースト
     details: 10を越える路線があり、それぞれに個性があります。
-  - title: 発展した経済
+  - icon: 🏦
+    title: 発展した経済
     details: 券売機はもちろんコンビニやネットショップもあり、為替も実装予定。
-  - title: 銃と車
+  - icon: 🔫
+    title: 銃と車
     details: 鉄道だけでなく、道路網も発展しています。銃もあり、スピード感ある銃撃戦が楽しめます。
 ---
 
