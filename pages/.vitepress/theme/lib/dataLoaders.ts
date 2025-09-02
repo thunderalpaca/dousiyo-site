@@ -14,8 +14,8 @@ export interface Line {
 export interface StationID {
   line: Line['id']
   id: string
-  prev: Station["id"]
-  next: Station["id"]
+  prev: string | string[] | null
+  next: string | string[] | null
 }
 
 export interface Station {
@@ -87,9 +87,18 @@ export function buildStationsData(lines: Line[], stationRaw: any[]): Station[] {
       const numRaw = entry?.number ?? entry?.num ?? entry?.id
       const numStr = String(numRaw ?? '').trim()
       if (!/^[0-9]+$/.test(numStr)) continue
-      const prevRaw: string | undefined = entry?.prev
-      const nextRaw: string | undefined = entry?.next
-      stationLines.push({ line: line.id, id: numStr, prev: prevRaw as any, next: nextRaw as any })
+      const normalizePN = (v: any): string | string[] | null => {
+        if (v == null) return null
+        if (Array.isArray(v)) {
+          const arr = v.map(x => String(x ?? '').trim()).filter(Boolean)
+          return arr.length ? arr : null
+        }
+        const s = String(v ?? '').trim()
+        return s || null
+      }
+      const prevRaw = normalizePN(entry?.prev)
+      const nextRaw = normalizePN(entry?.next)
+      stationLines.push({ line: line.id, id: numStr, prev: prevRaw, next: nextRaw })
     }
   return { name, id: sSlug, lines: stationLines, link, x, y }
   })

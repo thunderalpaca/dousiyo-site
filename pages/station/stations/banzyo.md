@@ -10,6 +10,10 @@ line:
     prev: "syotu"
     next: "syako"
     number: "03"
+  houJ:
+    prev: ["sinkoka", "daitei"]
+    next: null
+    number: "03"
   kanKK:
     prev: null
     next: "kitasatsutaba"
@@ -22,6 +26,9 @@ description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、
 # {{ $frontmatter.title }} <ViewinMap />
 ![入口](/img/station/banzyo/front.webp)
 ![ホーム](/img/station/banzyo/platform.webp)
+
+## 他にも{{ $frontmatter.title }}駅があります
+- [迷鉄万丈](/station/stations/meitetsubanjo.md)
 
 ## 概要
 {{ $frontmatter.description }}  

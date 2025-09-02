@@ -6,6 +6,10 @@ line:
     prev: "sinkoka"
     next: null
     number: "02"
+  houJ:
+    prev: null
+    next: "banzyo"
+    number: "02"
 x: 300
 y: 450
 description: ""
@@ -16,7 +20,7 @@ description: ""
 
 ## 概要
 {{ $frontmatter.description }}  
-管理:   
+管理: [放物](/company/houbutu/index.md)    
 ひらがな: だいてい  
 ローマ字: Daitei  
 ナンバリング: <Numberling />

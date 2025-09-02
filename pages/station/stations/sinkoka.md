@@ -6,6 +6,10 @@ line:
     prev: null
     next: "daitei"
     number: "01"
+  houJ:
+    prev: null
+    next: "banzyo"
+    number: "01"
 x: 375
 y: 500
 description: "高賀の北の方にあるゆれつばめの駅。"
