@@ -17,3 +17,4 @@ description: "放物グループは、鉄道事業を中心に不動産開発、
 - [<span style="color: #0281C4">ゆれつばめ (G)</span>](/company/houbutu/line/yuretubame.md)
 - [<span style="color: #7B2CBF">空港誘導線 (H)</span>](/company/houbutu/line/kukoyudosen.md)
 - [<span style="color: #D74B7E">丈北送信線 (I)</span>](/company/houbutu/line/zyouhokusousinsen.md)
+- [<span style="color: #00a6ff">ゆれ文鳥 (J)</span>](/company/houbutu/line/yurebuntyo.md)

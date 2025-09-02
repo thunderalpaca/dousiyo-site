@@ -6,6 +6,10 @@ line:
     prev: "sinkoka"
     next: null
     number: "02"
+  houJ:
+    prev: "banzyo"
+    next: null
+    number: "02"
 x: 300
 y: 450
 description: ""

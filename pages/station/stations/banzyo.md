@@ -10,6 +10,10 @@ line:
     prev: "syotu"
     next: "syako"
     number: "03"
+  houJ:
+    prev: ["sinkoka", "daitei"]
+    next: null
+    number: "03"
   kanKK:
     prev: null
     next: "kitasatsutaba"
