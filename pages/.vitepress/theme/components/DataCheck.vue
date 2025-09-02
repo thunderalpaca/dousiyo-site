@@ -18,16 +18,30 @@
             <div class="station-prev-next" v-for="sl in st.lines" :key="sl.line + '-' + sl.id + '-pn'">
                 <small>
                     prev:
-                    <template v-if="sl.prev && stationById[sl.prev]">
+                    <template v-if="Array.isArray(sl.prev)">
+                        <template v-for="(pid, idx) in sl.prev" :key="pid">
+                            <template v-if="stationById[pid]"><a :href="stationById[pid].link">{{ stationById[pid].name }}</a></template>
+                            <template v-else>{{ pid }}</template>
+                            <template v-if="idx < sl.prev.length - 1">, </template>
+                        </template>
+                    </template>
+                    <template v-else-if="sl.prev && stationById[sl.prev]">
                         <a :href="stationById[sl.prev].link">{{ stationById[sl.prev].name }}</a>
                     </template>
-                    <template v-else>{{ sl.prev || '-' }}</template>
+                    <template v-else>{{ sl.prev ?? '-' }}</template>
                     ,
                     next:
-                    <template v-if="sl.next && stationById[sl.next]">
+                    <template v-if="Array.isArray(sl.next)">
+                        <template v-for="(nid, idx) in sl.next" :key="nid">
+                            <template v-if="stationById[nid]"><a :href="stationById[nid].link">{{ stationById[nid].name }}</a></template>
+                            <template v-else>{{ nid }}</template>
+                            <template v-if="idx < sl.next.length - 1">, </template>
+                        </template>
+                    </template>
+                    <template v-else-if="sl.next && stationById[sl.next]">
                         <a :href="stationById[sl.next].link">{{ stationById[sl.next].name }}</a>
                     </template>
-                    <template v-else>{{ sl.next || '-' }}</template>
+                    <template v-else>{{ sl.next ?? '-' }}</template>
                 </small>
             </div>
         </div>

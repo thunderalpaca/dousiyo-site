@@ -10,8 +10,8 @@ const { isDark: vpIsDark } = useData()
 
 interface LineConnection {
     code: string
-    prev: string | null
-    next: string | null
+    prev: string | string[] | null
+    next: string | string[] | null
 }
 
 interface Station {
@@ -169,43 +169,50 @@ function getLineConnections(stations: Station[], lines: Line[]): LineConnectionR
     for (const station of stations) {
         for (const [lineId, connection] of Object.entries(station.lines)) {
             if (!connection.next) continue
-            const nextStation = stations.find((s) => s.id === connection.next)
-            if (!nextStation) continue
 
-            const key = `${station.id}-${nextStation.id}`
-            if (processed.has(key)) continue
+            const nextIds = Array.isArray(connection.next) ? connection.next : [connection.next]
 
-            let usedLine = lines.find((l) => l.id === lineId)
-            let color = usedLine?.color ?? '#000'
-            let type: Line['type'] = usedLine?.type ?? 'normal'
-            let width = usedLine?.width ?? 4
+            const addConn = (toId: string) => {
+                const nextStation = stations.find((s) => s.id === toId)
+                if (!nextStation) return
 
-            if (!nextStation.lines[lineId]) {
-                const nextIds = Object.keys(nextStation.lines)
-                if (nextIds.length > 0) {
-                    const nextLine = lines.find((l) => l.id === nextIds[0])
-                    if (nextLine) {
-                        usedLine = nextLine
-                        color = nextLine.color
-                        type = nextLine.type
-                        width = nextLine.width
+                const key = `${station.id}-${nextStation.id}`
+                if (processed.has(key)) return
+
+                let usedLine = lines.find((l) => l.id === lineId)
+                let color = usedLine?.color ?? '#000'
+                let type: Line['type'] = usedLine?.type ?? 'normal'
+                let width = usedLine?.width ?? 4
+
+                if (!nextStation.lines[lineId]) {
+                    const nextLineIds = Object.keys(nextStation.lines)
+                    if (nextLineIds.length > 0) {
+                        const nextLine = lines.find((l) => l.id === nextLineIds[0])
+                        if (nextLine) {
+                            usedLine = nextLine
+                            color = nextLine.color
+                            type = nextLine.type
+                            width = nextLine.width
+                        }
                     }
                 }
+
+                connections.push({
+                    from: station,
+                    to: nextStation,
+                    line: {
+                        id: usedLine?.id ?? lineId,
+                        name: usedLine?.name ?? lineId,
+                        color,
+                        type,
+                        width,
+                    },
+                })
+
+                processed.add(key)
             }
 
-            connections.push({
-                from: station,
-                to: nextStation,
-                line: {
-                    id: usedLine?.id ?? lineId,
-                    name: usedLine?.name ?? lineId,
-                    color,
-                    type,
-                    width,
-                },
-            })
-
-            processed.add(key)
+            for (const nid of nextIds) addConn(nid)
         }
     }
     return connections

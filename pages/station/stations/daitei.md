@@ -7,8 +7,8 @@ line:
     next: null
     number: "02"
   houJ:
-    prev: "banzyo"
-    next: null
+    prev: null
+    next: "banzyo"
     number: "02"
 x: 300
 y: 450
@@ -20,7 +20,7 @@ description: ""
 
 ## 概要
 {{ $frontmatter.description }}  
-管理:   
+管理: [放物](/company/houbutu/index.md)    
 ひらがな: だいてい  
 ローマ字: Daitei  
 ナンバリング: <Numberling />
