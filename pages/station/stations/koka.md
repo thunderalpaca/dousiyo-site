@@ -29,7 +29,7 @@ description: "高賀駅は、3路線が乗り入れる6面10線の大規模な�
 
 ## 概要
 {{ $frontmatter.description }}  
-管理: [放物](/company/houbutu/index.md)  
+管理: [放物HG](/company/houbutuHG/index.md)   
 ひらがな: こうか  
 ローマ字: Koka  
 ナンバリング: <Numberling />

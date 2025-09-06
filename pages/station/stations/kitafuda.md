@@ -16,7 +16,7 @@ description: "干鉄の北札束と乗り換え可能"
 
 ## 概要
 {{ $frontmatter.description }}  
-管理: [放物](/company/houbutu/index.md)  
+管理: [放物HG](/company/houbutuHG/index.md)   
 ひらがな: きたふだ  
 ローマ字: Kitafuda  
 ナンバリング: <Numberling />

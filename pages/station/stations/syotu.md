@@ -24,7 +24,7 @@ description: "小津駅は、放物連絡線と空港誘導線、丈北送信線
 
 ## 概要
 {{ $frontmatter.description }}  
-管理: [放物](/company/houbutu/index.md)  
+管理: [放物HG](/company/houbutuHG/index.md)   
 ひらがな: しょうつ  
 ローマ字(放物): Syotu  
 ナンバリング: <Numberling />

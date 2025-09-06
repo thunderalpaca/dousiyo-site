@@ -13,7 +13,7 @@ hero:
 
 ## 認定鉄道会社
 
-- [放物](/company/houbutu)
+- [放物HG](/company/houbutuHG)
 - [迷名鉄道](/company/meitetsu)
 - [金欠HG](/company/kinketsuHG)
 - [古囲鐡道](/company/furui)
