@@ -36,6 +36,11 @@ features:
 
 <SokuhoSlider />
 
+## 2025年8月31日
+- [迷鉄](/company/meitetsu)  
+迷鉄全車両再構築計画により本日より**迷鉄全区間を運休**します  
+ご迷惑をおかけしますがご理解の方よろしくお願いします
+
 ## 2025年8月25日
 - [金欠鉄道取鳥線](/company/kinketsuHG/kinketsu/line/tottorisen.md)  
 金欠鉄道取鳥線は1週間~1ヶ月間ほど**試運転取り止め**します  
