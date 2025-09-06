@@ -2,11 +2,11 @@
 layout: doc
 title: "台庭"
 line:
-  houG:
+  yurG:
     prev: "sinkoka"
     next: null
     number: "02"
-  houJ:
+  yurJ:
     prev: null
     next: "banzyo"
     number: "02"
@@ -20,7 +20,7 @@ description: ""
 
 ## 概要
 {{ $frontmatter.description }}  
-管理: [放物](/company/houbutu/index.md)    
+管理: [放物HG](/company/houbutuHG/index.md)     
 ひらがな: だいてい  
 ローマ字: Daitei  
 ナンバリング: <Numberling />

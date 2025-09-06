@@ -22,7 +22,7 @@ description: ""  <- 駅の説明を入力
 
 ## 概要
 {{ $frontmatter.description }}  
-管理: [放物](/company/houbutu/index.md) <- 路線を管理している会社の名前を`[]`内に入力し、`()`には会社のページのリンクを入力  
+管理: [放物HG](/company/houbutuHG/index.md) <- 路線を管理している会社の名前を`[]`内に入力し、`()`には会社のページのリンクを入力  
 ひらがな: こうか  <- 駅のひらがな名を入力  
 ローマ字: Koka  <- 駅のローマ字名を入力  
 ナンバリング: <Numberling />

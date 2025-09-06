@@ -10,7 +10,7 @@ line:
     prev: "syotu"
     next: "syako"
     number: "03"
-  houJ:
+  yurJ:
     prev: ["sinkoka", "daitei"]
     next: null
     number: "03"
@@ -32,7 +32,7 @@ description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、
 
 ## 概要
 {{ $frontmatter.description }}  
-管理: [放物](/company/houbutu/index.md)  
+管理: [放物HG](/company/houbutuHG/index.md)   
 ひらがな: ばんじょう  
 ローマ字: Banzyo, Banjo  
 ナンバリング: <Numberling />

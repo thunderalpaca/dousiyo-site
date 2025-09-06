@@ -2,11 +2,11 @@
 layout: doc
 title: "新高賀"
 line:
-  houG:
+  yurG:
     prev: null
     next: "daitei"
     number: "01"
-  houJ:
+  yurJ:
     prev: null
     next: "banzyo"
     number: "01"
@@ -20,7 +20,7 @@ description: "高賀の北の方にあるゆれつばめの駅。"
 
 ## 概要
 {{ $frontmatter.description }}  
-管理: [放物](/company/houbutu/index.md)  
+管理: [放物HG](/company/houbutuHG/index.md)   
 ひらがな: しんこうか  
 ローマ字: SinKoka  
 ナンバリング: <Numberling />
