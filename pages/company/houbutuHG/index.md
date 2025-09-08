@@ -11,4 +11,4 @@ hero:
 # グループ会社一覧
 - [放物](/company/houbutuHG/houbutu)
 - [ゆれつばめ](/company/houbutuHG/yuretubame)
-- [はるかぜ(現在非認可)](/company/houbutuHG/harukaze)
+- [はるかぜ鉄道(現在非認可)](/company/houbutuHG/harukaze)
