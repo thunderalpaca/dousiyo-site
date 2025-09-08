@@ -6,7 +6,7 @@ description: "since 2021 from RTM"
 
 # {{ $frontmatter.title }}
 <br>
-<img src="/img/company/harquaLogo.svg" alt="はるかぜ鉄道線ロゴ" width="409.6px">
+<img src="/img/company/houbutuHG/harquaLogo.svg" alt="はるかぜ鉄道線ロゴ" width="409.6px">
 
 ## 概要
 はるかぜ鉄道は、とあるRTM鯖で2021年に誕生した「七新電気軌道」という~~名義というかなんというか~~を発祥とし、様々なサーバーを経由して鉄道開発と建築を行ってきた~~めんどくさがりの~~会社です。<br>
