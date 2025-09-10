@@ -74,7 +74,7 @@ const svgEl = ref<SVGSVGElement | null>(null)
 function buildRailwayMapData(rawLines: RawLine[], rawStations: RawStation[]): RailwayMapData {
     const lines: Line[] = rawLines.map((l) => ({
         id: l.id,
-        numbering: l.letter || l.id,
+        numbering: l.letter_override || l.letter || l.id,
         name: l.name,
         color: l.color || '#000',
         type: 'normal',
@@ -395,7 +395,7 @@ async function exportNowSimple() {
                             <rect x="10" :y="10 + i * 20" width="40" height="20" :fill="line.color" />
                             <a :href="line.url"><text x="12" :y="30 + i * 20 - 5" font-size="13"
                                     :fill="isColorLight(line.color)">{{
-                                        `${(line.id || '').slice(3)}01` }}</text></a>
+                                        `${line.numbering || ''}01` }}</text></a>
                         </template>
 
                         <rect x="52" y="8" :width="dynamicRectWidth" :height="(lines.length * 20) + 4"

@@ -12,7 +12,7 @@
           }"
         />
         {{ line.name }}
-        ({{ line.letter }})
+        ({{ line.letter_override ?? line.letter }})
       </a>
     </li>
   </ul>

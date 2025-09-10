@@ -4,6 +4,7 @@ import { withBase } from 'vitepress'
 export interface Line {
   name: string
   letter: string
+  letter_override?: string
   id: string
   link: string
   color: string
@@ -32,6 +33,7 @@ export function mapToLines(raw: any[]): Line[] {
     const url: string = item?.url || ''
     const title: string = item?.frontmatter?.title?.toString?.() || ''
     const letter: string = item?.frontmatter?.letter?.toString?.() || ''
+    const letter_override: string | undefined = item?.frontmatter?.letter_override?.toString?.()
     const name = title.replace(/\s*\([^)]+\)\s*$/, '').trim()
   const parts = url.split('/').filter(Boolean)
   const slug = (parts[parts.length - 1] || '').replace(/\.html$/, '')
@@ -41,7 +43,7 @@ export function mapToLines(raw: any[]): Line[] {
   const id = `${prefix}${letter}`
   const link = withBase(url.startsWith('/') ? url : `/${url}`)
     const color: string = item?.frontmatter?.color?.toString?.() || ''
-  const line: Line = { name, letter, id, link, color, slug, companyKey }
+  const line: Line = { name, letter, id, link, color, slug, companyKey, letter_override }
     return line
   })
 }
