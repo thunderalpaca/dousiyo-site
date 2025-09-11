@@ -14,6 +14,10 @@ line:
     prev: ["sinkoka", "daitei"]
     next: null
     number: "03"
+  yurK:
+    prev: null
+    next: "sinhokuzyo"
+    number: "03"
   kanKK:
     prev: null
     next: "kitasatsutaba"
