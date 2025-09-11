@@ -2,6 +2,7 @@
 layout: doc
 title: "ルール"
 description: "名前どうしよ鯖を快適に楽しく遊ぶためのルール"
+editLink: false
 ---
 
 # ルール
