@@ -4,7 +4,7 @@
             <a :href="line.link" style="color: black; font-weight: normal;">
                 <span class="line-name">{{ line.name }}</span></a>
             <span class="line-id" style="margin-left: 1em;">{{ line.id }}</span>
-            <span class="line-letter" style="margin-left: 1em;">{{ line.letter }}</span>
+            <span class="line-letter" style="margin-left: 1em;">{{ line.letter_override ?? line.letter }}</span>
         </div>
     </div>
 
@@ -13,7 +13,7 @@
             <a class="station-name" :href="st.link">{{ st.name }}</a>
             <span class="station-line" v-for="sl in st.lines" :key="sl.line + '-' + sl.id"
                 :style="{ backgroundColor: lineById[sl.line]?.color || '#ddd' }">
-                {{ lineById[sl.line]?.letter }}{{ sl.id }}
+                {{ lineById[sl.line]?.letter_override ?? lineById[sl.line]?.letter }}{{ sl.id }}
             </span>
             <div class="station-prev-next" v-for="sl in st.lines" :key="sl.line + '-' + sl.id + '-pn'">
                 <small>

@@ -5,7 +5,7 @@ description: "ゆれつばめはモノレール路線です。路線名は鳥か
 ---
 
 # {{ $frontmatter.title }}
-<img src="/img/company/yuretubame.webp" alt="ゆれつばめのロゴ" width="100px">
+<img src="/img/company/houbutuHG/yuretubame.webp" alt="ゆれつばめのロゴ" width="400px">
 
 ## 概要
 {{ $frontmatter.description }}

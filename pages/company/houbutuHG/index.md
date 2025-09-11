@@ -5,10 +5,10 @@ hero:
   name: "放物HG"
   tagline: いつかやる。そしてやらない。
 ---
-<!-- ![KGHD](/img/company/kinketsuHG/KGHD.webp) -->
+![HHG](/img/company/houbutuHG/HHG.webp)
 放物グループは、鉄道事業を中心に不動産開発、AI活用等の事業を展開しています。
 
 # グループ会社一覧
 - [放物](/company/houbutuHG/houbutu)
 - [ゆれつばめ](/company/houbutuHG/yuretubame)
-- [はるかぜ(現在非認可)](/company/houbutuHG/harukaze)
+- [はるかぜ鉄道(現在非認可)](/company/houbutuHG/harukaze)
