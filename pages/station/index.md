@@ -1,6 +1,7 @@
 ---
 layout: doc
 description: "駅一覧"
+editLink: false
 ---
 
 <script setup lang="ts">
