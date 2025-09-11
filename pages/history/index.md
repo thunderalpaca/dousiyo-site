@@ -1,8 +1,6 @@
 ---
 layout: home
-
-hero:
-  name: "名前どうしよ鯖の歴史"
+description: "名前どうしよ鯖の歴史"
 ---
 
 ![timeline1](/img/history1.jpg)

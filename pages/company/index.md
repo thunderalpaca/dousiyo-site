@@ -1,11 +1,8 @@
 ---
-layout: home
+layout: doc
 description: "各鉄道会社について紹介"
-
-hero:
-  name: "会社一覧"
-  tagline: 各鉄道会社について紹介
 ---
+# 会社一覧
 
 ## 民間軍事会社
 
