@@ -2,6 +2,7 @@
 layout: doc
 title: "参加方法"
 description: "サーバーへの参加方法を解説します"
+editLink: false
 ---
 
 # {{ $frontmatter.title }}
@@ -41,4 +42,4 @@ https://www.curseforge.com/download/app にアクセスし、「Download standal
 そして[ルール](/rule)と[法律](/law)を読みましょう。
 
 ## 楽しもう!
-最初は[こちら](/tour/guide)の観光ガイドを見て主要な施設を見て回りましょう。
+最初は[こちら](/tour/guide)の観光ガイドを見て主要な施設を見て回りましょう!
