@@ -70,6 +70,8 @@ const emit = defineEmits<{
 
 const svgEl = ref<SVGSVGElement | null>(null)
 
+const zoom = ref(0.5)
+
 // dataLoaders の出力から本コンポーネントの表示用データへ変換
 function buildRailwayMapData(rawLines: RawLine[], rawStations: RawStation[]): RailwayMapData {
     const lines: Line[] = rawLines.map((l) => ({
@@ -381,7 +383,7 @@ async function exportNowSimple() {
             {{ isFullscreen ? 'フルスクリーンを終了' : 'フルスクリーン' }}
         </button>
         <button class="export-btn" type="button" @click="exportNowSimple">ダウンロード</button>
-        <VueZoomable :style="{ width: '100%', height: isFullscreen ? '100vh' : '80vh' }" selector=".svg-container" :minZoom="0.1" :maxZoom="5" :buttonZoomStep="0.5" :wheelZoomStep="0.1">
+        <VueZoomable :style="{ width: '100%', height: isFullscreen ? '100vh' : '80vh' }" selector=".svg-container" :minZoom="0.1" :maxZoom="5" :buttonZoomStep="0.5" :wheelZoomStep="0.1" v-model:zoom="zoom">
             <div class="svg-container">
                 <svg ref="svgEl" xmlns="http://www.w3.org/2000/svg" class="railway-map" :width="width + 100" :height="height + 100" :viewBox="`0 0 ${width} ${height}`"
                     role="img" aria-label="路線図キャンバス"
@@ -412,7 +414,7 @@ async function exportNowSimple() {
                     <template v-for="(connection, i) in lineConnections"
                         :key="`conn-${i}-${connection.from.id}-${connection.to.id}`">
                         <path :d="connectionPath(connection)" fill="none" :stroke="connection.line.color || '#000'"
-                            :stroke-width="connection.line.width || 4" stroke-linecap="round" stroke-linejoin="round"
+                            :stroke-width="Math.min((connection.line.width || 4) / (zoom / 2), 4)" stroke-linecap="round" stroke-linejoin="round"
                             :stroke-dasharray="connection.line.type === 'dot' ? '4, 4' : undefined" />
                     </template>
 
@@ -423,11 +425,11 @@ async function exportNowSimple() {
                         </g>
                         <g v-if="!station.not_station">
                             <a :href="station.url">
-                                <circle :cx="station.x" :cy="station.y" r="8" fill="white" stroke="#333"
-                                    stroke-width="2" :class="{ highlight: station.id === props.station }" />
+                                <circle :cx="station.x" :cy="station.y" :r="Math.min(7 / (zoom / 2), 7)" fill="white" stroke="#333"
+                                    :stroke-width="Math.min(2 / (zoom / 2), 2)" :class="{ highlight: station.id === props.station }" />
                             </a>
-                            <text :x="station.x" :y="station.y - 15" text-anchor="middle" class="station-label"
-                                :class="{ rainbow: station.id === props.station }" :fill="dark ? '#fff' : '#000'"
+                            <text :x="station.x - 10" :y="station.y - 10" text-anchor="middle" class="station-label" :style="{ fontSize: Math.min(Math.max(11 / (zoom / 2), 5), 11) + 'px' }"
+                                :class="{ rainbow: station.id === props.station }" :fill="dark ? '#fff' : '#000'" :stroke="dark ? '#000' : '#fff'" stroke-width="0.15"  font-weight="bold"
                                 :transform="`rotate(-60 ${station.x}, ${station.y - 15})`">{{
                                     getStationDisplayText(station, lines) }}</text>
 
@@ -445,6 +447,7 @@ async function exportNowSimple() {
         </VueZoomable>
     </main>
 
+{{ zoom }}
 </template>
 
 <style scoped>
