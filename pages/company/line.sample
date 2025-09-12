@@ -7,7 +7,7 @@ color: "#123456" <- ラインカラーを入力
 description: "" <- 路線の説明を入力
 ---
 
-# {{ $frontmatter.title }} ({{ $frontmatter.letter }})
+# {{ $frontmatter.title }} ({{ $frontmatter.letter_override ?? $frontmatter.letter }})
 
 ## 概要
 {{ $frontmatter.description }}  
