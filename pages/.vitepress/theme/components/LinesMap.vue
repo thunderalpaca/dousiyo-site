@@ -446,8 +446,6 @@ async function exportNowSimple() {
             </div>
         </VueZoomable>
     </main>
-
-{{ zoom }}
 </template>
 
 <style scoped>
