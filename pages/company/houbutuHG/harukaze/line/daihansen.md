@@ -7,7 +7,7 @@ color: "#008080"
 description: "南北をつなぐ新たな路線"
 ---
 
-# {{ $frontmatter.title }} ({{ $frontmatter.letter }})
+# {{ $frontmatter.title }} ({{ $frontmatter.letter_override ?? $frontmatter.letter }})
 
 ## 概要
 {{ $frontmatter.description }}  
