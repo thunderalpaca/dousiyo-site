@@ -2,6 +2,7 @@
 layout: doc
 title: "法律"
 description: "名前どうしよ鯖法律"
+editLink: false
 ---
 
 # 法律

@@ -1,6 +1,7 @@
 ---
 layout: doc
 description: "車両図鑑"
+editLink: false
 ---
 
 <script setup lang="ts">

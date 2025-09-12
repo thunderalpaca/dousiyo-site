@@ -14,6 +14,8 @@ export default defineConfig({
   ignoreDeadLinks: true,
   description: '名前どうしよ鯖の長い歴史と各鉄道会社について紹介',
   head: [['link', { rel: 'icon', href: `${normalizedBase}favicon.png` }]],
+  cleanUrls: true,
+  lastUpdated: true,
   vite: { plugins: [pagefindPlugin({
     btnPlaceholder: '検索',
     placeholder: 'サイト内を検索',
@@ -33,9 +35,14 @@ export default defineConfig({
       { text: '観光', link: '/tour' },
       { text: '法律', link: '/law' },
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/valine3gDev/dousiyo-site' }
-    ]
+    ],
+    editLink: {
+      pattern: 'https://github.com/valine3gDev/dousiyo-site/edit/main/pages/:path',
+      text: 'このページを編集する'
+    },
+    lastUpdatedText: '最終更新',
+    outlineTitle: '目次',
   },
 })
