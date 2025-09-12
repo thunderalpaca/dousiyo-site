@@ -14,4 +14,4 @@ description: "since 2022 from RTM"
 なお、運営者本人が曲を作れるので気まぐれで発車メロディーやBGMが書きおろし曲だったりします。
 
 ## 所持路線
-- 工事準備中...
+- [万丈](/company/houbutuHG/harukaze/line/banjosen.md)・[台板線](/company/houbutuHG/harukaze/line/daihansen.md)
