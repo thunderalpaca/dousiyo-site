@@ -7,7 +7,7 @@ color: "#800080"
 description: "都市開発モノレールの遺志を継ぐローカル地下路線"
 ---
 
-# {{ $frontmatter.title }} ({{ $frontmatter.letter }})
+# {{ $frontmatter.title }} ({{ $frontmatter.letter_override ?? $frontmatter.letter }})
 
 ## 概要
 {{ $frontmatter.description }}  
