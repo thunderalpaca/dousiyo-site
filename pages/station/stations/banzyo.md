@@ -22,10 +22,6 @@ line:
     prev: null
     next: "kitasatsutaba"
     number: "01"
-  harb:  
-    prev: null 
-    next: "nishi-kaedegaoka"
-    number: "07" 
 x: 500
 y: 350
 description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、放物連絡線へのアクセスも可能です。"
@@ -37,6 +33,7 @@ description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、
 
 ## 他にも{{ $frontmatter.title }}駅があります
 - [迷鉄万丈](/station/stations/meitetsubanjo.md)
+- [風鉄万丈](/station/stations/huutetsubanjo.md)
 
 ## 概要
 {{ $frontmatter.description }}  

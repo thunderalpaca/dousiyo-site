@@ -3,7 +3,7 @@ layout: doc
 title: "西楓ヶ丘" 
 line:
   harb:  
-    prev: "banzyo"  
+    prev: "huutetsubanjo"  
     next: null  
     number: "08"  
   hard:  
@@ -11,7 +11,7 @@ line:
     next: null  
     number: "08"  
 x: 350  
-y: 350  
+y: 330  
 description: ""  
 ---
 
@@ -31,5 +31,8 @@ description: ""
 
 
 <!-- 他に書きたい情報がある場合自由に追加してください -->
-## 乗り換えできます
-- (350m程度) 新北丈 @[ゆれとんび (K)](/company/houbutuHG/yuretubame/line/yuretombi.md)
+## 補足
+### 建設中
+- 2～4号線には列車が来ません。
+### 駅名が違うが乗り換え可
+- もともと同一の計画を転用したため、[ゆれとんび線 新北丈](/station/stations/sinhokuzyo.md)が近くにあります。  台庭・高賀方面へお越しの際は、当駅で乗り換えが便利です。
