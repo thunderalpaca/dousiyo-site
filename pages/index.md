@@ -10,8 +10,8 @@ hero:
     alt: 三様にある偉人の像
   actions:
     - theme: brand
-      text: もっと詳しく!
-      link: /tour/guide
+      text: 参加方法
+      link: /join
     - theme: alt
       text: "ルールはこちら"
       link: /rule
