@@ -504,7 +504,6 @@ svg {
 }
 
 .rainbow {
-    stroke-width: 1;
     animation: rainbow 3s linear infinite;
 }
 
