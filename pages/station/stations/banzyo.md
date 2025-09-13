@@ -31,9 +31,7 @@ description: "万丈駅は、理事冠状線と丈北送信線の接続駅で、
 ![入口](/img/station/banzyo/front.webp)
 ![ホーム](/img/station/banzyo/platform.webp)
 
-## 他にも{{ $frontmatter.title }}駅があります
-- [迷鉄万丈](/station/stations/meitetsubanjo.md)
-- [風鉄万丈](/station/stations/huutetsubanjo.md)
+<Family />
 
 ## 概要
 {{ $frontmatter.description }}  

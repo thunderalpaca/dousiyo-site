@@ -26,6 +26,7 @@ export interface Station {
   link: string
   x?: number
   y?: number
+  parent?: Station['id']
 }
 
 export function mapToLines(raw: any[]): Line[] {
@@ -35,15 +36,15 @@ export function mapToLines(raw: any[]): Line[] {
     const letter: string = item?.frontmatter?.letter?.toString?.() || ''
     const letter_override: string | undefined = item?.frontmatter?.letter_override?.toString?.()
     const name = title.replace(/\s*\([^)]+\)\s*$/, '').trim()
-  const parts = url.split('/').filter(Boolean)
-  const slug = (parts[parts.length - 1] || '').replace(/\.html$/, '')
-  const lineIdx = parts.indexOf('line')
-  const companyKey = lineIdx > 0 ? parts[lineIdx - 1] : ''
-  const prefix = companyKey.slice(0, 3)
-  const id = `${prefix}${letter}`
-  const link = withBase(url.startsWith('/') ? url : `/${url}`)
+    const parts = url.split('/').filter(Boolean)
+    const slug = (parts[parts.length - 1] || '').replace(/\.html$/, '')
+    const lineIdx = parts.indexOf('line')
+    const companyKey = lineIdx > 0 ? parts[lineIdx - 1] : ''
+    const prefix = companyKey.slice(0, 3)
+    const id = `${prefix}${letter}`
+    const link = withBase(url.startsWith('/') ? url : `/${url}`)
     const color: string = item?.frontmatter?.color?.toString?.() || ''
-  const line: Line = { name, letter, id, link, color, slug, companyKey, letter_override }
+    const line: Line = { name, letter, id, link, color, slug, companyKey, letter_override }
     return line
   })
 }
@@ -72,16 +73,17 @@ export function buildStationsData(lines: Line[], stationRaw: any[]): Station[] {
     const parts = stationUrl.split('/').filter(Boolean)
     const sSlug = (parts[parts.length - 1] || '').replace(/\.html$/, '')
     const link: string = stationUrl ? withBase(stationUrl.startsWith('/') ? stationUrl : `/${stationUrl}`) : ''
-  // x, y from frontmatter (number or numeric string)
-  const xRaw = st?.frontmatter?.x
-  const yRaw = st?.frontmatter?.y
-  const xNum = typeof xRaw === 'number' ? xRaw : parseFloat(String(xRaw ?? ''))
-  const yNum = typeof yRaw === 'number' ? yRaw : parseFloat(String(yRaw ?? ''))
-  const x: number | undefined = Number.isFinite(xNum) ? xNum : undefined
-  const y: number | undefined = Number.isFinite(yNum) ? yNum : undefined
+    const parent: Station['id'] = st?.frontmatter?.parent?.toString?.() || undefined
+    // x, y from frontmatter (number or numeric string)
+    const xRaw = st?.frontmatter?.x
+    const yRaw = st?.frontmatter?.y
+    const xNum = typeof xRaw === 'number' ? xRaw : parseFloat(String(xRaw ?? ''))
+    const yNum = typeof yRaw === 'number' ? yRaw : parseFloat(String(yRaw ?? ''))
+    const x: number | undefined = Number.isFinite(xNum) ? xNum : undefined
+    const y: number | undefined = Number.isFinite(yNum) ? yNum : undefined
     const stationLines: StationID[] = []
     const lineFm: Record<string, any> | undefined = st?.frontmatter?.line
-  if (!lineFm || typeof lineFm !== 'object') return { name, id: sSlug, lines: stationLines, link, x, y }
+    if (!lineFm || typeof lineFm !== 'object') return { name, id: sSlug, lines: stationLines, link, x, y, parent }
     for (const key of Object.keys(lineFm)) {
       let line: Line | undefined = idMap[key] || slugMap[key]
       if (!line) continue
@@ -102,7 +104,7 @@ export function buildStationsData(lines: Line[], stationRaw: any[]): Station[] {
       const nextRaw = normalizePN(entry?.next)
       stationLines.push({ line: line.id, id: numStr, prev: prevRaw, next: nextRaw })
     }
-  return { name, id: sSlug, lines: stationLines, link, x, y }
+    return { name, id: sSlug, lines: stationLines, link, x, y, parent }
   })
 }
 

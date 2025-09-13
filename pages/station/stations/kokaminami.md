@@ -4,15 +4,18 @@ title: "高賀南"
 line:
   toyT:
     prev: null
-    next: shin-shotsu
+    next: "shin-shotsu"
     number: "10"
 x: 450
 y: 550
 description: ""
+parent: "koka"
 ---
 
 # {{ $frontmatter.title }} <ViewinMap />
 <!-- ![高賀駅を正面から見ている](/img/tour/koka.webp) -->
+
+<Family />
 
 ## 概要
 {{ $frontmatter.description }}  

@@ -13,9 +13,12 @@ line:
 x: 350  
 y: 330  
 description: ""  
+parent: "kaedegaoka"
 ---
 
 # {{ $frontmatter.title }} <ViewinMap />
+
+<Family />
 
 ## 概要
 {{ $frontmatter.description }}  
