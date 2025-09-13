@@ -22,6 +22,8 @@ description: "楓ヶ丘駅は、南北本線と理事冠状線の接続駅で、
 ![放物の入口](/img/station/kaedegaoka/houbutufront.webp)
 ![放物のホーム](/img/station/kaedegaoka/houbutuplatform.webp)
 
+<Family />
+
 ## 概要
 {{ $frontmatter.description }}  
 管理: [迷鉄](/company/meitetsu/index.md), [放物HG](/company/houbutuHG/index.md)  

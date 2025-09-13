@@ -15,6 +15,7 @@ import Sokuho from './components/Sokuho.vue'
 import SokuhoSlider from './components/SokuhoSlider.vue'
 import ViewinMap from './components/ViewinMap.vue'
 import QuickNews from './components/QuickNews.vue'
+import Family from './components/Family.vue'
 
 export default {
   extends: DefaultTheme,
@@ -33,6 +34,7 @@ export default {
     app.component('Sokuho', Sokuho)
     app.component('SokuhoSlider', SokuhoSlider)
     app.component('ViewinMap', ViewinMap)
+    app.component('Family', Family)
     // app.component('QuickNews', QuickNews)
   }
 } satisfies Theme

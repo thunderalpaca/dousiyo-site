@@ -15,6 +15,8 @@ description: "札束駅は、札束財閥の本社前に位置し、三味線と
 ![入口](/img/station/satutaba/front.webp)
 ![ホーム](/img/station/satutaba/platform.webp)
 
+<Family />
+
 ## 概要
 {{ $frontmatter.description }}  
 管理: [放物HG](/company/houbutuHG/index.md)   

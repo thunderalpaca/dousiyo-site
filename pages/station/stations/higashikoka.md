@@ -17,10 +17,13 @@ line:
 x: 400
 y: 450
 description: ""
+parent: "koka"
 ---
 
 # {{ $frontmatter.title }} <ViewinMap />
 <!-- ![高賀駅を正面から見ている](/img/tour/koka.webp) -->
+
+<Family />
 
 ## 概要
 {{ $frontmatter.description }}  

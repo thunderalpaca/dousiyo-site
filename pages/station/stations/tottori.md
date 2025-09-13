@@ -26,8 +26,7 @@ description: "取鳥は,放物,迷鉄,豊急,金鉄が乗り入れる巨大な�
 # {{ $frontmatter.title }} <ViewinMap />
 <!-- ![高賀駅を正面から見ている](/img/tour/koka.webp) -->
 
-## 他にも{{ $frontmatter.title }}があります
-- [電鉄取鳥](/station/stations/dentetsutottori.md)
+<Family />
 
 ## 概要
 {{ $frontmatter.description }}  
