@@ -1,5 +1,5 @@
 <template>
-    <div v-if="familyStations.length > 0" class="family-stations">
+    <div v-if="familyStations.length > 0">
         <h2>他にも{{ parentStationNameStr }}駅があります</h2>
         <ul>
             <li v-for="station in familyStations" :key="station.id">
