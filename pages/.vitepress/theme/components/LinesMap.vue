@@ -446,8 +446,6 @@ async function exportNowSimple() {
             </div>
         </VueZoomable>
     </main>
-
-{{ zoom }}
 </template>
 
 <style scoped>
@@ -506,7 +504,6 @@ svg {
 }
 
 .rainbow {
-    stroke-width: 1;
     animation: rainbow 3s linear infinite;
 }
 
