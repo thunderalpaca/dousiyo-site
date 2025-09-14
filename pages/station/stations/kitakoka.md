@@ -9,10 +9,13 @@ line:
 x: 400
 y: 500
 description: ""
+parent: "koka"
 ---
 
 # {{ $frontmatter.title }} <ViewinMap />
 <!-- ![駅の写真の説明](駅の写真のURL) -->
+
+<Family />
 
 ## 概要
 {{ $frontmatter.description }}  

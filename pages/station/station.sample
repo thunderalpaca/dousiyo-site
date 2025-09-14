@@ -10,16 +10,13 @@ line:
 x: 0  <- そのまま
 y: 0  <- そのまま
 description: ""  <- 駅の説明を入力
+parent: "" <- 派生駅の場合は親駅のIDを入力
 ---
 
 # {{ $frontmatter.title }} <ViewinMap />
 ![写真](/img/station/)
 
-<!-- 複数派生駅がある場合、代表駅にのみ追加 -->
-## 他にも{{ $frontmatter.title }}駅があります
-- [東高賀](/station/stations/higashikoka.md)
-- [高賀南](/station/stations/kokaminami.md)
-- [新高賀](/station/stations/sinkoka.md)
+<Family />
 
 ## 概要
 {{ $frontmatter.description }}  

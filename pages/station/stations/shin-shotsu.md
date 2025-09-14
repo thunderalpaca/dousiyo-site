@@ -13,10 +13,13 @@ line:
 x: 450
 y: 600
 description: ""
+parent: "syotu"
 ---
 
 # {{ $frontmatter.title }} <ViewinMap />
 <!-- ![駅の写真の説明](駅の写真のURL) -->
+
+<Family />
 
 ## 概要
 {{ $frontmatter.description }}  

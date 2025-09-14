@@ -15,6 +15,8 @@ description: "初期スポーンにある放物の駅。珍しい1面1線構造�
 ![正面](/img/station/sanyo/front.webp)
 ![ホーム](/img/station/sanyo/platform.webp)
 
+<Family />
+
 ## 概要
 {{ $frontmatter.description }}  
 管理: [放物](/company/houbutu)  
