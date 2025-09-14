@@ -17,5 +17,4 @@ description: "各鉄道会社について紹介"
 
 ## 認可鉄道会社
 
-- [鮫波急行](/company/samekyu)
 - [干鉄](/company/kantetsu)
