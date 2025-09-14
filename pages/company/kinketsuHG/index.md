@@ -11,3 +11,4 @@ hero:
 - [豊急](/company/kinketsuHG/toyokyu)
 - [金欠鉄道](/company/kinketsuHG/kinketsu)
 - [送風鉄道](/company/kinketsuHG/sofu)
+- [鮫波急行](/company/kinketsuHG/samekyu)
