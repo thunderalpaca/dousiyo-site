@@ -5,7 +5,7 @@ description: ""
 ---
 
 # {{ $frontmatter.title }}
-<img src="/img/company/SNKLogo.webp" alt="鮫波急行のロゴ" width="300px">
+<img src="/img/company/kinketsuHG/SNKLogo.webp" alt="鮫波急行のロゴ" width="300px">
 
 ## 概要
 {{ $frontmatter.description }}
