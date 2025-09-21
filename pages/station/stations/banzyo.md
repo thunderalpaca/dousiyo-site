@@ -4,7 +4,7 @@ title: "万丈"
 line: 
   houB:
     prev: "kitafuda"
-    next: "kaedegaoka"
+    next: null
     number: "03"
   houI:
     prev: "syotu"

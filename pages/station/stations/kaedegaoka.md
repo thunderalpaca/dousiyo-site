@@ -6,27 +6,19 @@ line:
     prev: "meitetsubanjo"
     next: "shimotani"
     number: "03"
-  houB:
-    prev: "banzyo"
-    next: null
-    number: "04"
 x: 400
 y: 300
-description: "楓ヶ丘駅は、南北本線と理事冠状線の接続駅で、近くには楓ヶ丘サーキットがあります。"
+description: "楓ヶ丘駅は、南北本線の駅で、近くには楓ヶ丘サーキットがあります。"
 ---
 
 # {{ $frontmatter.title }} <ViewinMap />
-### 迷鉄楓ヶ丘
 ![迷鉄の入口](/img/station/kaedegaoka/meitetsu.webp)
-### 放物楓ヶ丘
-![放物の入口](/img/station/kaedegaoka/houbutufront.webp)
-![放物のホーム](/img/station/kaedegaoka/houbutuplatform.webp)
 
 <Family />
 
 ## 概要
 {{ $frontmatter.description }}  
-管理: [迷鉄](/company/meitetsu/index.md), [放物HG](/company/houbutuHG/index.md)  
+管理: [迷鉄](/company/meitetsu/index.md)
 ひらがな: かえでがおか  
 ローマ字: Kaedegaoka  
 ナンバリング: <Numberling />
