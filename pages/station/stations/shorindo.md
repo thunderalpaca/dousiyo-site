@@ -13,14 +13,12 @@ description: ""
 
 # {{ $frontmatter.title }} <ViewinMap />
 
-<Family />
-
 ## 概要
 {{ $frontmatter.description }}  
 管理: [はるかぜ鉄道 (2025～)](/company/houbutuHG/harukaze/index.md)  
 ひらがな: しょうりんどう 
 ローマ字: Shorindo  
-ナンバリング: <Numberling />
+ナンバリング: <Numberling /> (変更予定)
 
 ## 乗り入れ路線
 <LineInfo />
@@ -28,6 +26,6 @@ description: ""
 <!-- 名所がある場合に追加してください -->
 
 <!-- 他に書きたい情報がある場合自由に追加してください -->
-## 補足
-### 路線建設中
-- 1号線には列車が来ません。
+## 地上駅について
+建設途中で線路の傾斜が許容できない角度になってしまったことから、再建設時に廃止することが決まっています。
+定期運航の列車はありません。

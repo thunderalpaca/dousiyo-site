@@ -22,7 +22,7 @@ parent: "banzyo"
 管理: [はるかぜ鉄道 (2025～)](/company/houbutuHG/harukaze/index.md)    
 ひらがな: ふうてつばんじょう  
 ローマ字: Hutetsu-banjo  
-ナンバリング: <Numberling />
+ナンバリング: <Numberling /> (変更予定)
 
 ## 乗り入れ路線
 <LineInfo />
