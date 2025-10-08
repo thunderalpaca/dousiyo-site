@@ -54,5 +54,5 @@ npm run docs:dev
 openseadragonを使用しているので、画像を変換する必要があります。
 ```sh
 sudo dnf install vips-tool
-vips dzsave ./map2025-08-25.png ./map2025-08-25 --tile-size=256 --overlap=1 --suffix=.jpg[Q=90]
+vips dzsave ./map2025-10-08.png ./map2025-10-08 --tile-size=256 --overlap=1 --suffix=.jpg[Q=90]
 ```
