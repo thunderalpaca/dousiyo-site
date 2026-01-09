@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "迷名鉄道"
-description: ""
+description: "主に高賀から北で事業を展開しています。"
 ---
 
 # {{ $frontmatter.title }}
@@ -9,6 +9,7 @@ description: ""
 
 ## 概要
 {{ $frontmatter.description }}
+今は長期休暇を取っているそうです。
 
 ## 所持路線
 - [<span style="color: #78B0F9">南北本線 (N)</span>](/company/meitetsu/line/nanbokuhonsen.md)

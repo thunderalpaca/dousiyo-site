@@ -1,7 +1,7 @@
 ---
 layout: doc
 title: "金欠鉄道"
-description: ""
+description: "金木や扇池を中心とした鉄道を運営しています。"
 ---
 
 # {{ $frontmatter.title }}
@@ -9,6 +9,7 @@ description: ""
 
 ## 概要
 {{ $frontmatter.description }}
+
 
 ## 所持路線
 - [<span style="color: #BFFD5B; background-color: #1B1B1F;">金欠取鳥線 (E)</span>](/company/kinketsuHG/kinketsu/line/tottorisen.md)

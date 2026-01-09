@@ -11,10 +11,11 @@ description: "各鉄道会社について紹介"
 ## 認定鉄道会社
 
 - [放物HG](/company/houbutuHG)(3社)
-- [金欠HG](/company/kinketsuHG)(4社)
+- [金欠HG](/company/kinketsuHG)(5社)
 - [迷名鉄道](/company/meitetsu)
 - [古囲鐡道](/company/furui)
 
 ## 認可鉄道会社
 
+- [九京電鉄](/company/kyukei)
 - [干鉄](/company/kantetsu)
