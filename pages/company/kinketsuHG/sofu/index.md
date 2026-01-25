@@ -1,17 +1,19 @@
 ---
 layout: doc
 title: "送風鉄道"
-description: ""
+description: "路線網が広く、所有している駅数が多いのが特徴です。"
 ---
 
 # {{ $frontmatter.title }}
 <img src="" alt="送風のロゴ" width="100px">
 
 ## 概要
-{{ $frontmatter.description }}
+{{ $frontmatter.description }}  
+本線より北扇池線の方が本線では？と思ったそこのあなた、路線建設者もそう思っています。
 
 ## 所持路線
 - [<span style="color: #8AA1D0">ニューゴールド線 (SN)</span>](/company/kinketsuHG/sofu/line/newgoldsen.md)
 - [<span style="color: #505AA9">送風鉄道本線 (ST)</span>](/company/kinketsuHG/sofu/line/soufuhonsen.md)
 - [<span style="color: #794A29">北扇池線 (SK)</span>](/company/kinketsuHG/sofu/line/kitaogiikesen.md)
+- [<span style="color: #B94D53">春野線 (SH)</span>](/company/kinketsuHG/sofu/line/harunosen.md)
 - [<span style="color: #8AAD54">扇池緑地線 (SO)</span>](/company/kinketsuHG/sofu/line/ogiikeryokuchisen.md)

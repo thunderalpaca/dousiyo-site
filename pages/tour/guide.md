@@ -62,7 +62,7 @@ x2648, z3421
 <small>セロリ</small>
 
 ## 花川山
-初心者にオススメの土地。自由に建築しちゃおう！  
+Minecraftらしい建築が集まってる場所だよ。 
 ### アクセス
 x2787, z2300  
 [花川山駅](/station/stations/kasenyama.md)のすぐ横
